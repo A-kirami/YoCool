@@ -1,4 +1,4 @@
-﻿﻿# YoCool——YobotWebBeautify
+# YoCool——YobotWebBeautify
 
 ## 这是什么？
 本项目旨在对yobot的后台页面进行美化工作
