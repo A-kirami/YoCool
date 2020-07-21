@@ -7,18 +7,49 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('yobot_static', filename='css/style1.css') }}">
+  <script type="text/javascript">
+  	$(function() {
+  		$(window).scroll(function() {
+  			var topToolbar = $("#topToolbar");
+  			var headerH = $("#header").outerHeight();
+  			var scrollTop = $(document).scrollTop();
+  			if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style) {
+  				if (scrollTop >= headerH) {
+  					topToolbar.show();
+  				} else if (scrollTop < headerH) {
+  					topToolbar.hide();
+  				}
+  			} else {
+  				if (scrollTop >= headerH) {
+  					topToolbar.stop(false, true).animate({
+  						'top': 0
+  					});
+  				} else if (scrollTop < headerH) {
+  					topToolbar.stop(false, true).animate({
+  						'top': -40
+  					});
+  				}
+  			};
+  		});
+  	});
+  </script>
 </head>
 
 <body>
   <div id="app">
-    <el-page-header @back="location='../'" :content="groupData.group_name + ' - 公会战设置'"></el-page-header>
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-      <el-menu-item index="1">面板</el-menu-item>
-      <el-menu-item index="2">预约</el-menu-item>
-      <el-menu-item index="3">查刀</el-menu-item>
-      <el-menu-item index="4">统计</el-menu-item>
-      <el-menu-item index="5">我的</el-menu-item>
-    </el-menu>
+    <div id="topToolbar">
+    	<el-page-header @back="location='../'"></el-page-header>
+    	<div class="logo"><a class="url" href="https://pcr.botlink.xyz/"></a></div>
+    	<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+    		<el-menu-item index="5">我的</el-menu-item>
+    		<el-menu-item index="4">统计</el-menu-item>
+    		<el-menu-item index="3">查刀</el-menu-item>
+    		<el-menu-item index="2">预约</el-menu-item>
+    		<el-menu-item index="1">面板</el-menu-item>
+    	</el-menu>
+    </div>
     <h1 style="text-align:center">设置</h1>
     <el-form ref="form" :model="form" label-width="120px">
       <el-form-item label="游戏区服">
@@ -82,9 +113,7 @@
       </el-form-item>
     </el-form>
   </div>
-  <footer style="text-align: center">
-    powered by <a href="https://github.com/yuudi/yobot">yobot</a>
-  </footer>
+  <div id="bottomToolbar">Powered by <a href="https://github.com/pcrbot/yobot">Yobot</a> | Themes by <a href="https://github.com/A-kirami/YoCool">YoCool</a></div>
 </body>
 <script>var csrf_token = "{{ session['csrf_token'] }}";</script>
 <script src="{{ url_for('yobot_static', filename='clan/setting.js') }}"></script>

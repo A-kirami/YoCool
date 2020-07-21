@@ -1,0 +1,238 @@
+/* style */
+
+body {
+	text-align: center;
+}
+
+.big {
+	font-size: 32px;
+}
+
+.exbig {
+	font-size: 48px;
+}
+
+.exxbig {
+	font-size: 76px;
+}
+
+.el-row {
+	margin-bottom: 15px;
+}
+
+el-button {
+	width: 80px;
+}
+
+.buttons-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.buttons-row .el-button {
+	font-size: 14px;
+	min-width: 100px;
+	height: 34px;
+	border-radius: 5px;
+}
+
+.el-menu-item {
+	padding: 5px 20px;
+}
+
+.el-button {
+	color: #FFF;
+	background-color: #5cb85c;
+	border-color: #5cb85c;
+}
+
+.el-button--info {
+    background: #5cb85c;
+    border-color: #5cb85c;
+    color: #FFF;
+}
+
+.el-button--info.is-active,
+.el-button--info:active {
+    background: #4c9a4c;
+    border-color: #4c9a4c;
+    color: #FFF;
+}
+
+.el-button--info:active {
+	outline: 0
+}
+
+.el-button--info:focus,
+.el-button--info:hover {
+    background: #66cd66;
+    border-color: #66cd66;
+    color: #FFF;
+}
+
+.el-button--info.is-disabled,
+.el-button--info.is-disabled:active,
+.el-button--info.is-disabled:focus,
+.el-button--info.is-disabled:hover {
+	color: #FFF;
+	background-color: #c8c9cc;
+	border-color: #c8c9cc
+}
+
+.el-button--info.is-plain {
+	color: #909399;
+	background: #f4f4f5;
+	border-color: #d3d4d6
+}
+
+.el-button--info.is-plain:focus,
+.el-button--info.is-plain:hover {
+	background: #909399;
+	border-color: #909399;
+	color: #FFF
+}
+
+.el-button--info.is-plain:active {
+	background: #82848a;
+	border-color: #82848a;
+	color: #FFF;
+	outline: 0
+}
+
+.el-button--info.is-plain.is-disabled,
+.el-button--info.is-plain.is-disabled:active,
+.el-button--info.is-plain.is-disabled:focus,
+.el-button--info.is-plain.is-disabled:hover {
+	color: #bcbec2;
+	background-color: #f4f4f5;
+	border-color: #e9e9eb
+}
+
+.clanname {
+	background: url("../images/banner.png") no-repeat;
+	text-align: center;
+	width: 320px;
+	height: 60px;
+	background-size: 320px 60px;
+	color: #FFF;
+	font-size: 20px;
+	margin: 0 auto;
+	margin-top: 70px;
+	margin-bottom: -3%;
+	line-height: 30px;
+}
+
+.clanbg {
+	background: url("../images/clanbg.png") no-repeat center;
+	text-align: center;
+	width: 100%;
+	height: 300px;
+	transform:scale(0.75);
+	margin: 0 auto;
+	display:block;
+}
+
+/* progress */
+
+progress {
+	display: inline-block;
+	vertical-align: baseline
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0
+	}
+
+	to {
+		background-position: 0 0
+	}
+}
+
+@-o-keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0
+	}
+
+	to {
+		background-position: 0 0
+	}
+}
+
+@keyframes progress-bar-stripes {
+	from {
+		background-position: 40px 0
+	}
+
+	to {
+		background-position: 0 0
+	}
+}
+
+.progress {
+	height: 15px;
+	margin-bottom: 6px;
+	overflow: hidden;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: none;
+}
+
+.progress-bar {
+	float: left;
+	width: 0;
+	height: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	background-color: #5cb85c;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+	box-shadow: none;
+}
+
+.progress-bar-striped,
+.progress-striped .progress-bar {
+	background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px
+}
+
+.progress-bar.active,
+.progress.active .progress-bar {
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+	-o-animation: progress-bar-stripes 2s linear infinite;
+	animation: progress-bar-stripes 2s linear infinite
+}
+
+/* CharacterspriteAnime */
+
+.character-container {
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	background: url("../images/sprite03.png");
+	background-size: 100%;
+}
+
+.character-container.char {
+	animation: spriteAnimechar 700ms steps(19) infinite;
+}
+
+@keyframes spriteAnimechar {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 -3800px;
+	}
+}
