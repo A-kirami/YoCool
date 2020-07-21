@@ -19,3 +19,4 @@
 yobot后台美化组(Q群)：1143518690
 
 ## 相关项目
+- [YobotWebWhite](https://github.com/shkongzhu/YobotWebWhite)
