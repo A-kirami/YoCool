@@ -1,7 +1,7 @@
 ﻿# YobotWebBeautify
 
 ## 这是什么？
-本项目旨在对yobot的后台页面进行美化工作，美观
+本项目旨在对yobot的后台页面进行美化工作
 - 默认主题
 	- PrincessAdventure——与公主们展开一场冒险故事吧
 - 其他主题
