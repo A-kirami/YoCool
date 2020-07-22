@@ -15,7 +15,7 @@ YoCool是[yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ## 如何使用？
 ### 插件版或源码版</br>
-> 将主题包中的template与static文件夹，复制到yobot\src\client\public目录下</br>
+> 将主题包中的**template**与**static**文件夹，复制到**yobot\src\client\public目录下**</br>
 > 直接覆盖，无需重启，即时生效</br>
 > **！覆盖前请先备份好原始文件**</br>
 ### 便携版</br>
@@ -25,7 +25,7 @@ YoCool是[yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 	```HTML
 	<div class="logo"><a class="url" href="你的主页地址"></a></div>
 	```
-	- 打开static\yocool\css目录下的style.css，将其中的logo部分链接的图片修改为自己的botlogo或网页logo图片（或者直接在static\yocool\images文件夹中替换尺寸相同的logo图片，注意保持文件名一致）
+	- 打开**static\yocool\css**目录下的**style.css**，将其中的logo部分链接的图片修改为自己的botlogo或网页logo图片（或者直接在**static\yocool\images**文件夹中替换尺寸相同的logo图片，注意保持文件名一致）
 	```CSS
 	.logo {
 	……
