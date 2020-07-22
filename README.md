@@ -6,7 +6,7 @@ YoCool是[yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 *本项目仅含主题模板，需要搭配yobot本体使用*
 
 ### 主题模板
-#### 点击可前往示例网站
+**点击可前往示例网站**
 - 默认主题
 	- [PrincessAdventure](https://pcr.botlink.xyz/demo/yocool/princessadventure/)——与公主们展开一场冒险故事吧！
 - 其他主题
@@ -15,16 +15,17 @@ YoCool是[yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ## 如何使用？
 ### 插件版或源码版</br>
+> 将主题包中的template与static文件夹，复制到yobot\src\client\public目录下</br>
 > 直接覆盖，无需重启，即时生效</br>
+> **！覆盖前请先备份好原始文件**</br>
 ### 便携版</br>
 > 更换插件版或源码版，再进行上述操作</br>
-**！覆盖前请先备份好原始文件**</br>
 - 注意：需要自行修改的地方有</br>
 	- 将各个html文件中的logo链接修改为自己的bot主页链接
 	```HTML
 	<div class="logo"><a class="url" href="你的主页地址"></a></div>
 	```
-	- 打开YoCool\PrincessAdventure\static\yocool\css目录下的style.css，将其中的logo部分链接的图片修改为自己的botlogo或网页logo图片（或者直接在\yocool\images目录中替换尺寸相同的logo图片，注意保持文件名一致）
+	- 打开static\yocool\css目录下的style.css，将其中的logo部分链接的图片修改为自己的botlogo或网页logo图片（或者直接在static\yocool\images文件夹中替换尺寸相同的logo图片，注意保持文件名一致）
 	```CSS
 	.logo {
 	……
