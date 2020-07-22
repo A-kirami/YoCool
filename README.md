@@ -20,23 +20,24 @@ YoCool是[yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 > **！覆盖前请先备份好原始文件**</br>
 ### 便携版</br>
 > 更换插件版或源码版，再进行上述操作</br>
-- 注意：需要自行修改的地方有</br>
-	- 将各个html文件中的logo链接修改为自己的bot主页链接
-	```HTML
-	<div class="logo"><a class="url" href="你的主页地址"></a></div>
-	```
-	- 打开**static\yocool\css**目录下的**style.css**，将其中的logo部分链接的图片修改为自己的botlogo或网页logo图片（或者直接在**static\yocool\images**文件夹中替换尺寸相同的logo图片，注意保持文件名一致）
-	```CSS
-	.logo {
-	……
-	background: url("logo图片地址")
-	……
-	}
-	```
-	- 如果既没有logo也没有网页地址，可以直接删除这行代码
-	```HTML
-	<div class="logo"><a class="url" href="https://pcr.botlink.xyz/"></a></div>
-	```
+### 特别注意</br>
+> **以下部分需要额外手动修改**</br>
+- 将各个html文件中的logo链接修改为自己的bot主页链接
+```HTML
+<div class="logo"><a class="url" href="你的主页地址"></a></div>
+```
+- 打开**static\yocool\css**目录下的**style.css**，将其中的logo部分链接的图片修改为自己的botlogo或网页logo图片（或者直接在**static\yocool\images**文件夹中替换尺寸相同的logo图片，注意保持文件名一致）
+```CSS
+.logo {
+……
+background: url("logo图片地址")
+……
+}
+```
+- 如果既没有logo也没有网页地址，可以直接删除这行代码
+```HTML
+<div class="logo"><a class="url" href="https://pcr.botlink.xyz/"></a></div>
+```
 
 ## 项目进度
 - PrincessAdventure
