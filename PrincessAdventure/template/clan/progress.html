@@ -2,39 +2,15 @@
 
 <head>
   <title>出刀记录</title>
-  <meta name='viewport' content='width=1485' charset="utf-8" />
+  <meta name='viewport' content='width=480' charset="utf-8" />
   <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="{{ url_for('yobot_static', filename='css/style1.css') }}">
-  <script type="text/javascript">
-  	$(function() {
-  		$(window).scroll(function() {
-  			var topToolbar = $("#topToolbar");
-  			var headerH = $("#header").outerHeight();
-  			var scrollTop = $(document).scrollTop();
-  			if ($.browser.msie && ($.browser.version == "6.0") && !$.support.style) {
-  				if (scrollTop >= headerH) {
-  					topToolbar.show();
-  				} else if (scrollTop < headerH) {
-  					topToolbar.hide();
-  				}
-  			} else {
-  				if (scrollTop >= headerH) {
-  					topToolbar.stop(false, true).animate({
-  						'top': 0
-  					});
-  				} else if (scrollTop < headerH) {
-  					topToolbar.stop(false, true).animate({
-  						'top': -40
-  					});
-  				}
-  			};
-  		});
-  	});
-  </script>
+  <script src="{{ url_for('yobot_static', filename='yocool/js/yocool.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('yobot_static', filename='yocool/css/style.css') }}">
+  
   
   <style>
     .el-table td,
@@ -186,7 +162,6 @@
       没有记录
     </template>
   </div>
-  <div id="bottomToolbar">Powered by <a href="https://github.com/pcrbot/yobot">Yobot</a> | Themes by <a href="https://github.com/A-kirami/YoCool">YoCool</a></div>
 </body>
 <script>var csrf_token = "{{ session['csrf_token'] }}";</script>
 <script src="{{ url_for('yobot_static', filename='clan/progress.js') }}"></script>
