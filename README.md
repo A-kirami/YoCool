@@ -15,7 +15,7 @@ YoCool是[yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ## 如何使用？
 ### 插件版或源码版</br>
-> 将主题包中的**template**与**static**文件夹，复制到**yobot\src\client\public目录下**</br>
+> 将主题包中的**template**与**static**文件夹，复制到**yobot\src\client\public**目录下</br>
 > 直接覆盖，无需重启，即时生效</br>
 > **！覆盖前请先备份好原始文件**</br>
 ### 便携版</br>
