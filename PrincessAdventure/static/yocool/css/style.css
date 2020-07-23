@@ -1,6 +1,6 @@
 /* style */
 
-:not(input,textarea){
+/* :not(input,textarea){
     moz-user-select: -moz-none;
     -moz-user-select: none;
     -o-user-select:none;
@@ -8,7 +8,7 @@
     -webkit-user-select:none;
     -ms-user-select:none;
     user-select:none;
-}
+} */
 
 [contenteditable="true"], input, textarea {
     -webkit-user-select: auto!important;
