@@ -287,3 +287,12 @@ progress {
 		background-position: 0 -3600px;
 	}
 }
+
+/* -----------Waves----------- */
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg,#FF9800 0%,#FF5722 100%);
+  color:white;
+}

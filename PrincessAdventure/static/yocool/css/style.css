@@ -1,17 +1,17 @@
-/* style */
+/* -----------style----------- */
 
 * {
-    moz-user-select: -moz-none;
-    -moz-user-select: none;
-    -o-user-select:none;
-    -khtml-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+	moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-*:not(input,textarea) { 
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
+*:not(input, textarea) {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
 }
 
 html {
@@ -24,7 +24,7 @@ body {
 	margin: 0px;
 }
 
-h1{
+h1 {
 	margin-top: 60px;
 }
 
@@ -66,8 +66,8 @@ el-button {
 }
 
 .el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
-    outline: 0;
-    color: #ffffff;
+	outline: 0;
+	color: #ffffff;
 }
 
 .clanname {
@@ -94,7 +94,7 @@ el-button {
 	display: block;
 }
 
-/* logo */
+/* -----------logo----------- */
 
 @media only screen and (min-width: 1080px) {
 	.logo {
@@ -127,4 +127,113 @@ el-button {
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+
+/* -----------login----------- */
+
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	max-width: 400px;
+}
+
+.comment {
+	color: #aaa;
+	line-height: 20px;
+	font-size: 0.8em;
+	margin: 20px 0;
+}
+
+
+
+/* -----------Waves----------- */
+
+
+
+.inner-header {
+	height: 200px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.flex {
+	/*Flexbox for containers*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.waves {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	margin-bottom: -7px;
+	/*Fix for safari gap*/
+	min-height: 60px;
+	max-height: 120px;
+}
+
+.content {
+	position: relative;
+	height: 20vh;
+	text-align: center;
+	background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+	animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+	animation-delay: -2s;
+	animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+	animation-delay: -3s;
+	animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+	animation-delay: -4s;
+	animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+	animation-delay: -5s;
+	animation-duration: 20s;
+}
+
+@keyframes move-forever {
+	0% {
+		transform: translate3d(-90px, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(85px, 0, 0);
+	}
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+	.waves {
+		height: 40px;
+		min-height: 40px;
+	}
+
+	.content {
+		height: 30vh;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
 }
