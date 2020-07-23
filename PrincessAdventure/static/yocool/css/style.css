@@ -1,6 +1,6 @@
 /* style */
 
-*{
+:not(input,textarea){
     moz-user-select: -moz-none;
     -moz-user-select: none;
     -o-user-select:none;
