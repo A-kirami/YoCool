@@ -4,7 +4,7 @@
 YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项目，拥有多种主题风格可供选择。</br>
 *本项目仅含主题模板，需要搭配Yobot本体使用*
 
-## 如何使用？
+## 如何使用
 > 前往[YoCoolWiki](https://github.com/A-kirami/YoCool/wiki)查看使用说明
 
 ## 代码贡献
