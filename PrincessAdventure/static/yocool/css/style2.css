@@ -66,6 +66,12 @@
 	border-color: #e9e9eb
 }
 
+.el-button:focus, .el-button:hover {
+    color: #000068;
+    border-color: #c6e2ff;
+    background-color: #FFFFFF;
+}
+
 .background {
 	position: fixed;
 	width: 100%;
@@ -296,3 +302,18 @@ progress {
   background: linear-gradient(60deg,#000f63 0%,#28006f 100%);
   color:white;
 }
+
+.item-link {
+	    font-family: 'PingFangSC-SC', "Microsoft YaHei", Tahoma, sans-serif;
+	    color: #FFFFFF;
+	    display: none;
+	    padding: 6px 20px;
+	    background-color: #000068;
+	    margin: 17px auto;
+	    font-size: 14px;
+	    line-height: 25px;
+	    border-radius: 5px;
+	    -webkit-transition: all 160ms;
+	    transition: all 160ms;
+	    font-weight: normal;
+	}

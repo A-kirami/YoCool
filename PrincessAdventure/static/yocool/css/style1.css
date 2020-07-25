@@ -1,12 +1,12 @@
 .el-button {
 	color: #FFF;
-	background-color: #f5b459;
-	border-color: #f5b459;
+	background-color: #ffbc35;
+	border-color: #ffbc35;
 }
 
 .el-button--info {
-	background: #f5b459;
-	border-color: #f5b459;
+	background: #ffbc35;
+	border-color: #ffbc35;
 	color: #FFF;
 }
 
@@ -64,6 +64,12 @@
 	color: #bcbec2;
 	background-color: #f4f4f5;
 	border-color: #e9e9eb
+}
+
+.el-button:focus, .el-button:hover {
+    color: #ffaa00;
+    border-color: #c6e2ff;
+    background-color: #FFFFFF;
 }
 
 .background {
@@ -296,3 +302,20 @@ progress {
   background: linear-gradient(60deg,#FF9800 0%,#FF5722 100%);
   color:white;
 }
+
+/* -----------statistics----------- */
+
+.item-link {
+	    font-family: 'PingFangSC-SC', "Microsoft YaHei", Tahoma, sans-serif;
+	    color: #FFFFFF;
+	    display: none;
+	    padding: 6px 20px;
+	    background-color: #ffaa00;
+	    margin: 17px auto;
+	    font-size: 14px;
+	    line-height: 25px;
+	    border-radius: 5px;
+	    -webkit-transition: all 160ms;
+	    transition: all 160ms;
+	    font-weight: normal;
+	}

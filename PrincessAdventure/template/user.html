@@ -78,16 +78,9 @@ p {
                 <el-button type="primary" disabled>无公会</el-button>
             </el-tooltip>
             {%- else -%}
-			<!-- v3.6.2及以下 -->
             <a href="{{ url_for('yobot_clan', group_id=user.clan_group_id) }}">
                 <el-button type="primary" style="margin: 1%;">我的公会</el-button>
             </a>
-			<!-- v3.6.3以上 -->
-			<!-- {% for group in clan_groups -%}
-			<a href="{{ url_for('yobot_clan', group_id=group['group_id']) }}">
-			    <el-button type="primary">公会：{{ group['group_name'] }}</el-button>
-			</a>
-			{% endfor -%} -->
             {%- endif %}
             <a href="{{ url_for('yobot_reset_pwd') }}">
                 <el-button type="primary" style="margin: 1%;">修改密码</el-button>

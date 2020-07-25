@@ -2,22 +2,55 @@
 
 <head>
     <meta name='viewport' content='width=device-width, initial-scale=1' charset="utf-8" />
-    <title>yobot</title>
+    <title>Kirami Link Start</title>
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
-    <style>footer{position: absolute;bottom: 0;left: 50%;transform: translate(-50%, -50%);}</style>
+    <style>footer{position: absolute;bottom: 0;left: 50%;transform: translate(-50%, -50%);}
+    body {
+  margin:0;
+  text-align:center;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:16px;
+}
+    </style>
 </head>
 
 <body>
-    <h1>yobot homepage</h1>
-    <p>yobot is running</p>
-    <h2>version:</h2>
-    <p>{{ verinfo | replace("\n", "<br>")  }}</p>
+    <div class="header">
+
+        <div class="inner-header flex">
+            <h1>Hi!YoCool!</h1>
+        </div>
+        <p>—yobot is running—</p>
+		<!-- <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+			<defs>
+				<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+			</defs>
+			<g class="parallax">
+				<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+				<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+				<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+				<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+			</g>
+		</svg> -->
+</div>
+    
     <div id="app">
-        <a href="{{ url_for('yobot_login') }}"><el-button type="primary">登录</el-button></a>
+        <a href="{{ url_for('yobot_login') }}"><el-button type="primary" style="margin: 5%;height: 80px;width: 200px;">登录</el-button></a>
     </div>
-    <p><a href="{{ url_for('yobot_about') }}">关于</a></p>
+    <!--<p><a href="{{ url_for('yobot_about') }}">关于</a></p>-->
     <footer>
         {% if show_icp -%}
         <a target="_blank" href="http://beian.miit.gov.cn/">{{ icp_info }}</a>
@@ -30,7 +63,7 @@
         &nbsp;
         {% endif -%}
         {% endif -%}
-        powered by <a href="https://github.com/yuudi/yobot">yobot</a>
+        Powered by <a href="https://github.com/pcrbot/yobot">Yobot</a> | Themes by <a href="https://github.com/A-kirami/YoCool">YoCool</a>
     </footer>
 </body>
 <script>
