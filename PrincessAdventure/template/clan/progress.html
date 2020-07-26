@@ -47,6 +47,8 @@
 	    margin-left: 0px;
 	}
 	
+	
+	
 	@media only screen and (max-width: 1080px) {
 	
 	.el-date-editor.el-input, .el-date-editor.el-input__inner {
@@ -57,6 +59,10 @@
 		display: inline-block;
 		width: 110px;
 		text-align: left;
+	}
+	
+	.el-dialog {
+	    width: 80%;
 	}
 	}
   </style>
@@ -75,7 +81,7 @@
 				<el-menu-item index="1">面板</el-menu-item>
 			</el-menu>
 		</div>
-		<h1 style="text-align:center">出刀记录<el-popover placement="top" effect="light" trigger="hover">1.红名表示今日使用过SL<br>2.有色背景表示已完成今日出刀<br>3.点击昵称或详细可以查看详细出刀情况<i class="el-icon-info" slot="reference"></i></el-popover></h1>
+		<h1 style="text-align:center">出刀记录<el-popover placement="top" effect="light" trigger="hover">1.红名表示今日已使用过SL<br>2.有色背景表示已完成今日出刀<br>3.点击昵称或详细可以查看详细出刀情况<br>4.点击成员头像可以查看该成员的所有历史出刀记录<i class="el-icon-info" slot="reference"></i></el-popover></h1>
 		<el-date-picker v-model="reportDate" type="date" placeholder="选择日期" @change="report_day"></el-date-picker>
 		<el-button class="progress-btn" type="warning" @click="selectUnfinished">选中未完成</el-button>
 		<el-button class="progress-btn" type="primary" @click="sendRemindVisible = true">提醒出刀</el-button>
