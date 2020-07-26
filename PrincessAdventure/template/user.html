@@ -51,6 +51,7 @@ p {
 </div><br>
     <div id="app">
         <h4>欢迎，{{ user.nickname }}</h4>
+		<el-avatar :src="'https://q1.qlogo.cn/g?b=qq&nk=' + {{user.qqid}} + '&s=640'"></el-avatar>
         <!--<div>上次登录：[[ from_ts({{ session.get('last_login_time') }}) ]] at {{ session.get('last_login_ipaddr') }}（[[ addr.join('') ]]）
         </div>-->
         
@@ -87,7 +88,7 @@ p {
             </a>
             <br>
             <a href="{{ url_for('yobot_logout') }}">
-                <el-button type="danger" style="margin-top: 5%;">退出登陆</el-button>
+                <el-button type="danger" style="margin-top: 10%;">退出登陆</el-button>
             </a>
         </el-row>
     </div>

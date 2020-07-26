@@ -317,3 +317,17 @@ progress {
 	    transition: all 160ms;
 	    font-weight: normal;
 	}
+	
+/* 预约页面 */
+
+.finishedRow,
+	.finishedRow td{
+		background-color: #5cb85c !important;
+		color: #fff;
+	}
+
+
+	.finishedRow .el-table__expand-icon>.el-icon{
+		background-color: #5cb85c !important;
+		color: #fff;
+	}

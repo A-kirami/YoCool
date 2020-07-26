@@ -70,6 +70,16 @@ el-button {
 	color: #ffffff;
 }
 
+.el-dialog {
+    position: relative;
+    margin: 0 auto 50px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    width: 80%;
+}
+
 .clanname {
 	background: url("../images/banner.png") no-repeat;
 	text-align: center;
@@ -400,3 +410,9 @@ el-button {
 	}
 
 }
+
+/* 预约页面 */
+	
+.finishedRow td span {
+		color: #fff!important;
+	}

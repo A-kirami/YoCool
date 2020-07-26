@@ -66,10 +66,11 @@
 	border-color: #e9e9eb
 }
 
-.el-button:focus, .el-button:hover {
-    color: #ffaa00;
-    border-color: #c6e2ff;
-    background-color: #FFFFFF;
+.el-button:focus,
+.el-button:hover {
+	color: #ffaa00;
+	border-color: #c6e2ff;
+	background-color: #FFFFFF;
 }
 
 .background {
@@ -297,25 +298,39 @@ progress {
 /* -----------Waves----------- */
 
 .header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg,#FF9800 0%,#FF5722 100%);
-  color:white;
+	position: relative;
+	text-align: center;
+	background: linear-gradient(60deg, #FF9800 0%, #FF5722 100%);
+	color: white;
 }
 
 /* -----------statistics----------- */
 
 .item-link {
-	    font-family: 'PingFangSC-SC', "Microsoft YaHei", Tahoma, sans-serif;
-	    color: #FFFFFF;
-	    display: none;
-	    padding: 6px 20px;
-	    background-color: #ffaa00;
-	    margin: 17px auto;
-	    font-size: 14px;
-	    line-height: 25px;
-	    border-radius: 5px;
-	    -webkit-transition: all 160ms;
-	    transition: all 160ms;
-	    font-weight: normal;
-	}
+	font-family: 'PingFangSC-SC', "Microsoft YaHei", Tahoma, sans-serif;
+	color: #FFFFFF;
+	display: none;
+	padding: 6px 20px;
+	background-color: #ffaa00;
+	margin: 17px auto;
+	font-size: 14px;
+	line-height: 25px;
+	border-radius: 5px;
+	-webkit-transition: all 160ms;
+	transition: all 160ms;
+	font-weight: normal;
+}
+
+/* 预约页面 */
+
+.finishedRow,
+.finishedRow td {
+	background-color: #ffaf38 !important;
+	color: #fff;
+}
+
+
+.finishedRow .el-table__expand-icon>.el-icon {
+	background-color: #ffaf38 !important;
+	color: #fff;
+}
