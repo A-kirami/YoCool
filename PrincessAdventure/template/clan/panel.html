@@ -21,8 +21,6 @@
 </head>
 
 <body>
-	<div class="background-alpha"></div>
-	<div class="background"></div>
 	<div id="app">
 		<div id="topToolbar">
 			<el-page-header @back="location='../../user'"></el-page-header>
@@ -70,7 +68,7 @@
 					</el-col>
 					<el-col style="display: flex; justify-content: space-between; margin-bottom: 15px;">
 						<div @click="startmodify" style="cursor:pointer"><a :class="{ big: !bossData.challenger }">[[bossData.health.toString()
-								]]/</a>[[ bossData.full_health.toString() ]]</div>
+								]]/</a><font>[[ bossData.full_health.toString() ]]</font></div>
 						<div @click="startmodify" style="cursor:pointer"><a :class="{ big: !bossData.challenger }">[[ ((bossData.health/
 								bossData.full_health) * 100).toFixed(1) ]]%</a></div>
 					</el-col>
