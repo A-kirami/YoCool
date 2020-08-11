@@ -7,6 +7,24 @@
 	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
 	<script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
 	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
+	<style>
+		.el-page-header {
+		    display: flex;
+		    line-height: 24px;
+		    margin-bottom: 25px;
+		}
+		
+		.el-avatar--circle {
+		    border-radius: 50%;
+		    height: 150px;
+		    width: 150px;
+		}
+		
+		.el-input,.el-input__inner {
+			width: 250px;
+		}
+	</style>
+
 </head>
 
 {% if user.qqid != visitor and visitor.authority_group > 100 %}{# 不是本人且不是管理员 -#}
@@ -19,8 +37,10 @@
 <body>
 	<div id="app">
 		<el-page-header @back="location='..'" content="个人中心"></el-page-header>
-		<p :hidden="edit">用户名：[[ nickname ]]<el-button type="primary" size="mini" icon="el-icon-edit" @click="edit=true"
-			 circle></el-button>
+		<div style="margin: 60px 40px 0px;">
+		<el-avatar :src="'https://q1.qlogo.cn/g?b=qq&nk=' + {{user.qqid}} + '&s=640'"></el-avatar>
+		<p :hidden="edit" @click="edit=true">用户名：[[ nickname ]]<!-- <el-button type="primary" size="mini" icon="el-icon-edit" @click="edit=true"
+			 circle></el-button> -->
 		</p>
 		<p :hidden="!edit">用户名：<el-input v-model="nickname" placeholder="昵称"></el-input>
 			<el-button type="success" size="mini" icon="el-icon-check" @click="edit_nickname" circle></el-button>
@@ -29,6 +49,7 @@
 		<p>公会战所在群：{{ user.clan_group_id }}</p>
 		<p>上次登录时间：[[ from_ts({{ session.get('last_login_time') }}) ]]</p>
 		<p>上次登录ip地址：{{ user.last_login_ipaddr }}（[[ addr.join('') ]]）</p>
+		</div>
 	</div>
 </body>
 <script>

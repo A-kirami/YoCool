@@ -53,6 +53,10 @@ font{
 	color: var(--font-color);
 }
 
+a {
+	text-decoration:none;
+}
+
 .el-row {
 	margin-bottom: 15px;
 }
@@ -726,12 +730,116 @@ progress {
 
 .finishedRow,
 .finishedRow td {
-	background-color: var(--secondary-color-1) !important;
+	background-color: var(--primary-color-1) !important;
 	color: #fff;
 }
 
 
 .finishedRow .el-table__expand-icon>.el-icon {
-	background-color: var(--secondary-color-1) !important;
+	background-color: var(--primary-color-1) !important;
 	color: #fff;
+}
+
+.finishedRow  .el-table th {
+    background-color: var(--secondary-color-1);
+}
+
+.el-table th, .el-table tr{
+	background-color: var(--secondary-color-1);
+}
+
+.el-table tr{
+	background-color: var(--background-color);
+}
+
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+    background-color: var(--background-color);
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: var(--background-color);
+}
+
+.el-table--enable-row-transition .el-table__body td{
+	-webkit-transition: background-color .25s ease;
+	transition: background-color .25s ease;
+	background-color: var(--background-color);
+}
+
+.el-table thead.is-group th {
+    background: var(--secondary-color-1);
+}
+
+.el-table--border td {
+	border-right: none;
+}
+
+.el-table td {
+	border-bottom: none;
+}
+
+.el-table th.is-leaf {
+    border-bottom: none;
+}
+
+.el-table thead {
+    color: #FFF;
+    font-weight: 500;
+}
+
+td {
+	color: var(--font-color);
+}
+
+.el-table .sort-caret.ascending {
+    border-bottom-color: #ffffff;
+    top: 5px;
+}
+
+.el-table .sort-caret.descending {
+    border-top-color: #ffffff;
+    bottom: 7px;
+}
+
+.el-checkbox__inner:hover {
+    border-color: var(--secondary-color-2);
+}
+
+.el-table__expand-icon {
+    position: relative;
+    cursor: pointer;
+    color: var(--font-color);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    height: 20px;
+}
+
+.el-table--border, .el-table--group {
+    border: none;
+}
+
+.el-table::before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.el-table--border::after, .el-table--group::after, .el-table::before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.el-table__header {
+    table-layout: auto;
+    border-collapse: separate;
+}
+
+.el-table {
+    background-color: var(--background-color);
 }

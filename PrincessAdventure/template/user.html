@@ -38,6 +38,12 @@
 		font-size:14px;
 		color: #333333;
 	}
+	
+	.el-avatar--circle {
+	    border-radius: 50%;
+	    height: 80px;
+	    width: 80px;
+	}
 	</style>
 </head>
 
@@ -61,8 +67,8 @@
 		</svg>
 	</div><br>
 	<div id="app">
-		<h4>欢迎，{{ user.nickname }}</h4>
 		<el-avatar :src="'https://q1.qlogo.cn/g?b=qq&nk=' + {{user.qqid}} + '&s=140'"></el-avatar>
+		<h4>欢迎，{{ user.nickname }}</h4>
 		<!--<div>上次登录：[[ from_ts({{ session.get('last_login_time') }}) ]] at {{ session.get('last_login_ipaddr') }}（[[ addr.join('') ]]）
         </div>-->
 		{% if user.authority_group < 10 -%} <el-row>

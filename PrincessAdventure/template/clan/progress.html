@@ -13,22 +13,11 @@
 
 	<style>
 	.el-table td,.el-table th {
-      text-align: center;
+		text-align: center;
     }
+	
     .el-popover {
-      white-space: pre-wrap;
-    }
-    .digit6{
-      color:#FFFFFF;
-    }
-    .digit7{
-      color:#FFFFFF;
-    }
-    .digit8{
-      color:#FFFFFF;
-    }
-    .digit9{
-      color:#FFFFFF;
+		white-space: pre-wrap;
     }
 	
 	.progress-btn {
@@ -36,7 +25,14 @@
 		height: 36px;
 		padding: 10px 12px;
 	}
+	
 	.pc-box {
+		width: 1336px;
+		margin: 0 auto;
+	}
+	
+	.el-table{
+		width: 1336px;
 		margin: 0 auto;
 	}
 	
@@ -53,10 +49,7 @@
 		background-color: var(--secondary-color-1);
 	}
 	
-	.el-table{
-		width: 1270px;
-		margin: 0 auto;
-	}
+	
 	
 	.el-progress-bar__outer{
 		background-color: #ffffff;
@@ -70,8 +63,7 @@
 	
 	.damage-detail-box {
 		display: inline-block;
-		width: 110px;
-		text-align: left;
+		width: 130px;
 	}
 	
 	.el-dialog {
@@ -116,16 +108,19 @@
 		</el-dialog>
 		<template v-if="progressData.length > 0">
 			<el-button class="progress-btn" type="primary" @click="viewTails">尾刀一览</el-button>
-			<!-- 共[[ members.length ]]人，共[[ progressData.reduce((s,i)=>s+i.finished,0) ]]刀
-			<a class="digit6">十万</a> <a class="digit7">百万</a> <a class="digit8">千万</a> <a class="digit9">亿</a> -->
 			<el-row style="margin: 5px 0px 15px">
 				<el-col style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-					<div><p>成员[[ members.length ]]，已出[[ progressData.reduce((s,i)=>s+i.finished,0) ]]，剩余[[ members.length *
-					3-progressData.reduce((s,i)=>s+i.finished,0) ]]</p></div>
-					<div><p>[[ ((progressData.reduce((s,i)=>s+i.finished,0)/(members.length*3))*100).toFixed(1) ]]%</p></div>
+					<div>
+						<p>成员[[ members.length ]]，已出[[ progressData.reduce((s,i)=>s+i.finished,0) ]]，剩余[[ members.length *
+							3-progressData.reduce((s,i)=>s+i.finished,0) ]]</p>
+					</div>
+					<div>
+						<p>[[ ((progressData.reduce((s,i)=>s+i.finished,0)/(members.length*3))*100).toFixed(1) ]]%</p>
+					</div>
 				</el-col>
 				<el-col :span="24">
-					<el-progress :percentage="(progressData.reduce((s,i)=>s+i.finished,0)/members.length/3*100).toFixed(1)" :show-text="false" :stroke-width="16"></el-progress>
+					<el-progress :percentage="(progressData.reduce((s,i)=>s+i.finished,0)/members.length/3*100).toFixed(1)" :show-text="false"
+					 :stroke-width="16"></el-progress>
 				</el-col>
 			</el-row>
 			<el-dialog title="未完成的尾刀一览" :visible.sync="tailsDataVisible">
@@ -154,7 +149,7 @@
 				</el-table-column>
 				<el-table-column label="昵称" width="200">
 					<template slot-scope="scope">
-						<span :style="{color: scope.row.sl == today ? '#ff0000' : '#606266'}">[[ scope.row.nickname ]]</span>
+						<span :style="{color: scope.row.sl == today ? '#ff0000' : 'var(--font-color)'}">[[ scope.row.nickname ]]</span>
 					</template>
 				</el-table-column>
 				<el-table-column prop="finished" label="今日" width="80" sortable></el-table-column>
@@ -239,16 +234,24 @@
 			<div v-else class="pc-box">
 				<el-table width="100%" :data="progressData" :span-method="arraySpanMethod" ref="multipleTable" @selection-change="handleSelectionChange"
 				 stripe :row-class-name="getRowClass" size="medium">
-					<el-table-column type="selection" width="70"></el-table-column>
-					<el-table-column label="成员" width="70">
+
+					<el-table-column prop="sl" label="SL" width="75" sortable>
+						<template slot-scope="scope">
+							<template v-if="today==-1">
+								<i class="el-icon-folder-remove"></i>
+							</template>
+							<template v-else>
+								<i v-if="scope.row.sl==today" class="el-icon-star-off" style="color: #F56C6C"></i>
+								<i v-else class="el-icon-star-on" style="color: #67C23A"></i>
+							</template>
+						</template>
+					</el-table-column>
+					<el-table-column label="成员" width="60">
 						<template slot-scope="scope">
 							<el-avatar shape="square" :src="'https://q1.qlogo.cn/g?b=qq&nk=' + scope.row.qqid + '&s=140'" @click.native="location='../'+scope.row.qqid+'/'"></el-avatar>
 						</template>
 					</el-table-column>
-					<el-table-column label="昵称" width="180">
-						<template slot-scope="scope">
-							<span :style="{color: scope.row.sl == today ? '#ff0000e6' : '#606266'}">[[ scope.row.nickname ]]</span>
-						</template>
+					<el-table-column label="昵称" width="180" prop="nickname" sortable>
 					</el-table-column>
 					<el-table-column prop="finished" label="今日" width="60" sortable></el-table-column>
 					<el-table-column label="第一刀">
@@ -299,26 +302,11 @@
 							</template>
 						</el-table-column>
 					</el-table-column>
-					<!-- <el-table-column prop="sl" label="SL" width="75" sortable>
-						<template slot-scope="scope">
-							<template v-if="today==-1">
-								<i class="el-icon-folder-remove"></i>
-							</template>
-							<template v-else>
-								<i v-if="scope.row.sl==today" class="el-icon-star-off" style="color: #F56C6C"></i>
-								<i v-else class="el-icon-star-on" style="color: #67C23A"></i>
-							</template>
-						</template>
-					</el-table-column>
-					<el-table-column label="历史" width="80">
-						<template slot-scope="scope">
-							<el-button type="warning" circle icon="el-icon-document" @click="location='../'+scope.row.qqid+'/'"></el-button>
-						</template>
-					</el-table-column> -->
+					<el-table-column type="selection" width="60"></el-table-column>
 				</el-table>
+				<el-button class="progress-btn" @click="viewInExcel" size="mini" style="margin: 10px auto 0px;width: 100px;height: 28px;padding: 8px 10px;position: absolute;">在Excel中查看</el-button>
 			</div>
-			<el-button class="progress-btn" @click="location.href='./excel/'" size="mini" style="margin:10px auto 30px;width: 100px;height: 28px;padding: 8px 10px;">在Excel中查看</el-button>
-			<el-button class="progress-btn" @click="dropMemberVisible = true" style="width: 40px;right: 10px;margin-top: 5px;position: absolute;"><i
+			<el-button class="progress-btn" @click="dropMemberVisible = true" style="width: 40px;right: 10px;margin: 5px 0px 25px;position: absolute;"><i
 				 class="el-icon-delete"></i></el-button>
 			<el-dialog title="警告" :visible.sync="dropMemberVisible">
 				<p>您确定要删除这[[ multipleSelection.length ]]名成员吗</p>

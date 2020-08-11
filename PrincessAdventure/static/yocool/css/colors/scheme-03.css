@@ -1,10 +1,10 @@
 :root {
-  --primary-color-1: #66d264;/* 主色调1 */
-  --primary-color-2: #34de78;/* 主色调2 */
-  --secondary-color-1: #7fd849;/* 副色调1 */
+  --primary-color-1: #56c596;/* 主色调1 */
+  --primary-color-2: #73c088;/* 主色调2 */
+  --secondary-color-1: #397d54;/* 副色调1 */
   --secondary-color-2: #4dd252;/* 副色调2 */
   --background-color: #d5ffd0;/* 背景色 */
-  --font-color: #14c753;/* 文字颜色 */
+  --font-color: #117c6f;/* 文字颜色 */
 }
 
 /* CharacterspriteAnime */
