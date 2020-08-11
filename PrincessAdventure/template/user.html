@@ -15,10 +15,6 @@
 	html{
 		background-color: #FFFFFF;
 	}
-	body{
-		text-align:center;
-		margin:0;
-    }
 
 	h1 {
 		font-family: 'Lato', sans-serif;
@@ -43,6 +39,11 @@
 	    border-radius: 50%;
 	    height: 80px;
 	    width: 80px;
+		margin-top: -10px;
+	}
+	
+	.el-button {
+		margin: 0.5rem;
 	}
 	</style>
 </head>
@@ -69,24 +70,21 @@
 	<div id="app">
 		<el-avatar :src="'https://q1.qlogo.cn/g?b=qq&nk=' + {{user.qqid}} + '&s=140'"></el-avatar>
 		<h4>欢迎，{{ user.nickname }}</h4>
-		<!--<div>上次登录：[[ from_ts({{ session.get('last_login_time') }}) ]] at {{ session.get('last_login_ipaddr') }}（[[ addr.join('') ]]）
-        </div>-->
 		{% if user.authority_group < 10 -%} <el-row>
 			<a href="{{ url_for('yobot_setting') }}">
-				<el-button type="primary" style="margin: 1%;">设置项</el-button>
+				<el-button type="primary">设置项</el-button>
 			</a>
 			<a href="{{ url_for('yobot_users_managing') }}">
-				<el-button type="primary" style="margin: 1%;">用户管理</el-button>
+				<el-button type="primary">用户管理</el-button>
 			</a>
 			<a href="{{ url_for('yobot_groups_managing') }}">
-				<el-button type="primary" style="margin: 1%;">群管理</el-button>
+				<el-button type="primary">群管理</el-button>
 			</a>
 			</el-row>
-			<br />
 			{%- endif %}
 			<el-row>
 				<a href="{{ url_for('yobot_user_info', qqid=user.qqid) }}">
-					<el-button type="primary" style="margin: 1%;">个人中心</el-button>
+					<el-button type="primary">个人中心</el-button>
 				</a>
 				{% if user.clan_group_id is none -%}
 				<el-tooltip effect="dark" placement="bottom">
@@ -95,15 +93,16 @@
 				</el-tooltip>
 				{%- else -%}
 				<a href="{{ url_for('yobot_clan', group_id=user.clan_group_id) }}">
-					<el-button type="primary" style="margin: 1%;">我的公会</el-button>
+					<el-button type="primary">我的公会</el-button>
 				</a>
 				{%- endif %}
 				<a href="{{ url_for('yobot_reset_pwd') }}">
-					<el-button type="primary" style="margin: 1%;">修改密码</el-button>
+					<el-button type="primary">修改密码</el-button>
 				</a>
-				<br>
+			</el-row>
+			<el-row>
 				<a href="{{ url_for('yobot_logout') }}">
-					<el-button type="danger" style="margin-top: 10%;">退出登陆</el-button>
+					<el-button type="danger">退出登陆</el-button>
 				</a>
 			</el-row>
 	</div>
