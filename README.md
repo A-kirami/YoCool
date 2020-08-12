@@ -7,6 +7,9 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 ## 如何使用
 > 前往[YoCoolWiki](https://github.com/A-kirami/YoCool/wiki)查看使用说明
 
+## 更新日志
+[点这里了解最新更新内容](https://github.com/A-kirami/YoCool/wiki/update)
+
 ## 代码贡献
 感谢以下大佬在本项目中提供的支援和帮助</br>
 [@kaiseixd](https://github.com/kaiseixd) @白白小童鞋
