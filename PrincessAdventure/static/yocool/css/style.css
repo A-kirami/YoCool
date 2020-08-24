@@ -843,3 +843,7 @@ td {
 .el-table {
     background-color: var(--background-color);
 }
+
+.el-notification__title {
+	color: var(--font-color);
+}
