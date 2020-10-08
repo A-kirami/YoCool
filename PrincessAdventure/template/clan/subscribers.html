@@ -31,7 +31,7 @@
         	</el-menu>
         </div>
         <h1 style="text-align:center">预约名单</h1>
-        <el-tabs type="border-card">
+        <el-tabs type="border-card" style="width: 90%;margin: auto;">
             <el-tab-pane v-for="bn in 6">
                 <span slot="label">
                     <el-badge :value="subscribers[bn-1].length" :hidden="subscribers[bn-1].length == 0">[[ bosstag[bn-1] ]]</el-badge>

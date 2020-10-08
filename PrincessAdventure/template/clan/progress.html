@@ -108,7 +108,7 @@
 		</el-dialog>
 		<template v-if="progressData.length > 0">
 			<el-button class="progress-btn" type="primary" @click="viewTails">尾刀一览</el-button>
-			<el-row style="margin: 5px 0px 15px">
+			<el-row class='el-table' style="margin: auto;padding-bottom: 2%;">
 				<el-col style="display: flex; justify-content: space-between; margin-bottom: 5px;">
 					<div>
 						<p>成员[[ members.length ]]，已出[[ progressData.reduce((s,i)=>s+i.finished,0) ]]，剩余[[ members.length *
