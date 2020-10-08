@@ -847,3 +847,7 @@ td {
 .el-notification__title {
 	color: var(--font-color);
 }
+
+.el-tabs__item{
+	width: 40%;
+}
