@@ -12,7 +12,7 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ## 代码贡献
 感谢以下大佬在本项目中提供的支援和帮助</br>
-[@kaiseixd](https://github.com/kaiseixd) @白白小童鞋
+[@kaiseixd](https://github.com/kaiseixd) @白白小童鞋 [@pwinner](https://github.com/pwinner)
 
 ## 联系我们
 Yobot后台美化组(Q群)：1143518690
