@@ -4,14 +4,12 @@
 <a href='https://github.com/A-kirami'><img src="https://img.shields.io/badge/establish-Akirami-blue.svg"/></a>
 <a href='https://github.com/pcrbot/yobot'><img src="https://img.shields.io/badge/need-yobot-brightgreen.svg"/></a></a>
 <a href='https://github.com/A-kirami/YoCool/blob/master/LICENSE'><img src="https://img.shields.io/github/license/A-kirami/YoCool"/></a>
-<a href='https://github.com/pcrbot/yobot'><img src="https://img.shields.io/github/stars/A-kirami/YoCool"/></a>
+<a href='https://github.com/A-kirami/YoCool/'><img src="https://img.shields.io/github/stars/A-kirami/YoCool"/></a>
 <a href='https://github.com/A-kirami/YoCool/releases'><img src="https://img.shields.io/github/downloads/A-kirami/YoCool/total"/></a>
 </p>
 
 ### YoCool——美观、可爱、精致的Yobot后台主题
 YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项目，拥有多种主题风格可供选择。
-*本项目仅含主题模板，需要搭配Yobot本体使用*
-
 
 ## 目录
 - [安装使用](https://github.com/A-kirami/YoCool/#安装使用)
@@ -29,7 +27,7 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ### 要求
 
-Yobot需为**插件版**或**源码版**，**便携版暂无法安装使用**
+本项目仅含主题模板，需要搭配Yobot本体使用，Yobot需为**插件版**或**源码版**，**便携版暂无法安装使用**
 > [Yobot Windows 一键部署](http://yobot.win/install/Windows-mirai-auto/)
 
 > [Yobot Linux 一键部署](http://yobot.win/install/docker-script/)
