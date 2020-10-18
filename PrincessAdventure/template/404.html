@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 
 <head>
+	<title>404 Not Found</title>
 	<meta name='viewport' content='width=device-width, initial-scale=1' charset="utf-8" />
-	<title>404</title>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://yocool.botlink.xyz/yocool.js"></script>
+	<link rel="stylesheet" href="https://yocool.botlink.xyz/css/style.css">
 	<style>
 		body {
 			margin: 0;
@@ -14,7 +17,7 @@
 			font-weight: 300;
 			letter-spacing: 2px;
 			font-size: 48px;
-			margin-top: 15rem;
+			margin-top: 10rem;
 		}
 
 		p {
@@ -23,21 +26,23 @@
 			font-size: 16px;
 			margin-bottom: 40px;
 		}
-		a{
-			border: 1px solid #000000;
-			border-radius: 4px;
-			padding: 4px 10px;
-			color: #000000;
-			font-size: 20px;
-			text-decoration:none;
-		}
 	</style>
 </head>
 
 <body>
+	<a href="#" onclick="javascript:history.go(-1);">
 	<h1>404: not found</h1>
 	<p>这个{{ item }}不存在</p>
-	<p><a href="#" onclick="javascript:history.go(-1);">返回</a></p>
+	<div id="loading_character" class="move">
+		<div class="character-container char"></div>
+		<div class="text_loading hide">
+			<span class="icon_loading"><img src="https://yocool.botlink.xyz/image/icon-loading.png" width="16"
+					height="16" alt="loading..."></span>
+			<span><img src="https://yocool.botlink.xyz/image/text-loading.png" width="88" height="20"
+					alt="loading..."></span>
+		</div>
+	</div>
+</a>
 </body>
 
 </html>
