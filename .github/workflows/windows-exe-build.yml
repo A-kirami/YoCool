@@ -1,0 +1,60 @@
+name: windows-exe-build
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-2019
+    name: auto build windows binary
+
+    steps:
+      - name: Checkout yobot
+        uses: actions/checkout@v2
+        with:
+          repository: pcrbot/yobot
+          ref: v3.6.5
+          path: yobot
+
+      - name: Checkout yocool
+        uses: actions/checkout@v2
+        with:
+          path: yocool
+
+      - name: Overwrite yobot public files
+        shell: bash
+        run: |
+          cp -R yocool/PrincessAdventure/* yobot/src/client/public/
+
+      - name: Build exe binary and archive
+        shell: cmd
+        run: |
+          cd .\yobot\src\client
+          pip install pyinstaller
+          pip install -r requirements.txt
+          pyinstaller main.spec
+          cd .\dist
+          7z a yocool-windows64.zip yobot.exe
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./yobot/src/client/dist/yocool-windows64.zip
+          asset_name: yocool-windows64.zip
+          asset_content_type: application/zip
