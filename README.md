@@ -1,4 +1,4 @@
-![](https://i.loli.net/2020/07/23/HmLnyN5UKesPXld.png)
+﻿![](https://i.loli.net/2020/07/23/HmLnyN5UKesPXld.png)
 # YoCool——YobotWebBeautify
 <p align="left">
 <a href='https://github.com/A-kirami'><img src="https://img.shields.io/badge/establish-Akirami-blue.svg"/></a>
@@ -49,6 +49,7 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
       - 直接双击exe文件初始化后使用
    - 已安装yobot便携版<br>
       - 直接替换yobot便携版的exe文件(注意备份原exe文件)
+
 </details>
 
 <details>
