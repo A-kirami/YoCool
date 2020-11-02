@@ -70,7 +70,7 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 ## 最近更新
  - 调整了部分美术素材
  - 取消了用户面板页的公会按钮长度限制
-[了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
+<br>[了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
 
 ## 了解更多
 关于YoCool的更多信息，你可以在[YoCool Wiki](https://github.com/A-kirami/YoCool/wiki)中查看到
