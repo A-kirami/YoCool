@@ -27,7 +27,7 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ### 要求
 
-本项目仅含主题模板，需要搭配Yobot本体使用，Yobot需为**插件版**或**源码版**，**便携版暂无法安装使用**
+本项目仅含主题模板，需要搭配Yobot本体使用
 > [Yobot Windows 一键部署](http://yobot.win/install/Windows-mirai-auto/)
 
 > [Yobot Linux 一键部署](http://yobot.win/install/docker-script/)
@@ -35,28 +35,41 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 > [Yobot Linux 手动部署](http://yobot.win/install/Linux-gocqhttp/)
 
 ### 下载
-请前往[Releases](https://github.com/A-kirami/YoCool/releases)下载最新版本
+请前往[Releases](https://github.com/A-kirami/YoCool/releases)，根据自身Yobot版本下载最新YoCool压缩包
+
+**便携版**下载文件名结尾为**exe**的压缩包
+
+**插件版或源码版**下载文件名结尾为**plugin**的压缩包
 
 ### 安装
-安装前请先备份``yobot\src\client\public``文件夹中的全部文件，以防出现意外问题
-1. 复制主题包中的**template**和**static**文件夹
-2. 进入到``yobot\src\client\public``目录下
+<details>
+<summary>便携版</summary>
+  
+   - 未安装过yobot便携版<br>
+      - 直接双击exe文件初始化后使用
+   - 已安装yobot便携版<br>
+      - 直接替换yobot便携版的exe文件(注意备份原exe文件)
+</details>
+
+<details>
+<summary>插件版或源码版</summary>
+  
+安装前请先备份``yobot\src\client\public``文件夹中的全部文件，以防出现意外问题<br>
+
+1. 复制主题包中的**template**和**static**文件夹<br>
+
+2. 进入到``yobot\src\client\public``目录下<br>
+
 3. 将文件夹直接粘贴覆盖
+
+</details>
 
 ### 使用
 无需重启，初次安装或更新版本时，PC端需要``Ctrl+F5``强制刷新缓存，移动端需要清除浏览器缓存
 
 ## 最近更新
- - 全面适配yobot3.6.5版本
- - 会战面板页适配高分屏
- - 静态资源使用CDN加速
- - 进一步美化了404页、主页、修改密码页等
- - 调整了用户面板页的布局，精简了按钮数量，支持显示多公会
- - 原按钮已被移至个人中心页，点击头像或者昵称可以进入
- - 调整了登录页的提示信息样式
- - 调整了出刀记录页的删除按钮的位置，不会再紧贴边界了
- - 登录页、修改密码页可以使用回车键提交表单了
- - 现在统计页面需要api的网站可以即点即用了  
+ - 调整了部分美术素材
+ - 取消了用户面板页的公会按钮长度限制
 [了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
 
 ## 了解更多
