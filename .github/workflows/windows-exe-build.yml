@@ -27,6 +27,7 @@ jobs:
         shell: bash
         run: |
           cp -R yocool/PrincessAdventure/* yobot/src/client/public/
+          rm -rf yobot/src/client/public/static/yocool/images -rf
 
       - name: Build exe binary and archive
         shell: cmd
@@ -45,7 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          release_name: YoCool-${{ github.ref }}
           draft: false
           prerelease: false
 
@@ -56,5 +57,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./yobot/src/client/dist/yocool-windows64.zip
-          asset_name: yocool-windows64.zip
+          asset_name: YoCool-${{ github.ref }}-PrincessAdventure-plugin.zip
           asset_content_type: application/zip
