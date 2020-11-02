@@ -57,5 +57,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./yobot/src/client/dist/yocool-windows64.zip
-          asset_name: YoCool-${{ github.ref }}-PrincessAdventure-plugin.zip
+          asset_name: YoCool-PrincessAdventure-exe.zip
           asset_content_type: application/zip
