@@ -44,6 +44,10 @@
 		.el-button {
 			margin: 0.5rem;
 		}
+
+		.autowidth {
+			width: auto;
+		}
 	</style>
 </head>
 
@@ -89,12 +93,10 @@
             </el-tooltip>
             {%- else -%}
             {% for group in clan_groups -%}
-            <div style="width: 100%;">
             <a href="{{ url_for('yobot_clan', group_id=group['group_id']) }}">
-                <el-button type="primary" style="width: 200px;">公会：{{ group['group_name'] }}</el-button>
+                <el-button type="primary">公会：{{ group['group_name'] }}</el-button>
             </a>
-            </div>
-            <br />
+            <br /><br />
             {% endfor -%}
             {%- endif %}
         </el-row>
