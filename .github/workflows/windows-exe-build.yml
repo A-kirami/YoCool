@@ -1,9 +1,16 @@
 name: windows-exe-build
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      release_name:
+        description: "发布版本名称"
+        required: false
+        default: YoCool-v0.0.0
+      yobot_version:
+        description: "使用的 yobot 版本/分支"
+        required: false
+        default: master
 
 jobs:
   build:
@@ -15,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: pcrbot/yobot
-          ref: v3.6.5
+          ref: ${{ github.event.inputs.yobot_version }}
           path: yobot
 
       - name: Checkout yocool
@@ -27,7 +34,7 @@ jobs:
         shell: bash
         run: |
           cp -R yocool/PrincessAdventure/* yobot/src/client/public/
-          rm -rf yobot/src/client/public/static/yocool/images -rf
+          rm -rf yobot/src/client/public/static/yocool/images
 
       - name: Build exe binary and archive
         shell: cmd
@@ -46,7 +53,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: YoCool-${{ github.ref }}
+          release_name: ${{ github.event.inputs.release_name }}
           draft: false
           prerelease: false
 
