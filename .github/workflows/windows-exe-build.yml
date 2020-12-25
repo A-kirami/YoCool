@@ -34,7 +34,7 @@ jobs:
         shell: bash
         run: |
           cp -R yocool/PrincessAdventure/* yobot/src/client/public/
-          rm -rf yobot/src/client/public/static/yocool/images
+          rm -rf yobot/src/client/public/static/yocool
 
       - name: Build exe binary and archive
         shell: cmd
