@@ -43,6 +43,13 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ### 安装
 <details>
+<summary>一键安装(推荐)</summary>
+YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作的HoshinoBotV2插件
+[点这里去安装使用](https://github.com/pcrbot/YoCool-Console)
+
+</details>
+
+<details>
 <summary>便携版</summary>
   
    - 未安装过yobot便携版<br>
@@ -69,8 +76,8 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 无需重启，初次安装或更新版本时，PC端需要``Ctrl+F5``强制刷新缓存，移动端需要清除浏览器缓存
 
 ## 最近更新
- - 调整了部分美术素材
- - 取消了用户面板页的公会按钮长度限制
+ - 适配yobotv3.6.8
+ - 更换CDN源
 <br>[了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
 
 ## 了解更多
