@@ -45,6 +45,7 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 <details>
 <summary>一键安装(推荐)</summary>
 YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作的HoshinoBotV2插件
+
 [点这里去安装使用](https://github.com/pcrbot/YoCool-Console)
 
 </details>
