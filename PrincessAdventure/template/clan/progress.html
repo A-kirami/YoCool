@@ -254,7 +254,7 @@
 					@selection-change="handleSelectionChange" stripe :row-class-name="getRowClass" size="medium">
 					<el-table-column prop="sl" label="SL" width="75" sortable>
 						<template slot-scope="scope">
-							<template v-if="!isToday">
+							<template v-if="!today">
 								<i class="el-icon-folder-remove"></i>
 							</template>
 							<template v-else>
