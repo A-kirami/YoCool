@@ -27,6 +27,14 @@
 		    margin-bottom: -5%;
 		}
 		}
+		#tiphelp {
+			 position: absolute;
+			 text-align:left;
+			 margin-left: 40px;
+		}
+		#tiphelp a{
+			color: var(--primary-color-1);
+		}
 	</style>
 </head>
 
@@ -63,24 +71,26 @@
 				<div class="character" style="height: 165px; position: relative;z-index: 99;">
 					<div class="character-wrap" :style="{ position: 'absolute',left: (1-(bossData.health/bossData.full_health))*100 + '%'}"><a
 						 href='./setting/'>
-							<div class="character-container char" style="transform: translateX(-50%);"></div>
-						</a>
+							<el-tooltip class="item" effect="dark" content="点击打开公会设置" placement="top"><div class="character-container char" style="transform: translateX(-50%);"></div>
+						</el-tooltip></a>
 					</div>
 				</div>
 
+
 				<el-row style="margin-bottom: 5px;">
 					<el-col>
+						<el-tooltip class="item" effect="dark" content="点击修改Boss状态" placement="top">
 						<div class="progress progress-striped active" style="cursor:pointer" @click="startmodify"><img src="https://yocool.pcrlink.cn/princessadventure/flag.png"
 							 style="position: absolute;transform:scale(0.6);margin-top: -125px;left: -2%;" />
 							<img src="https://yocool.pcrlink.cn/princessadventure/box-gift.png" style="position: absolute;transform:scale(0.6);margin-top: -110px;right: -100px;" />
 							<div class="progress-bar" :style="{ width: (1-(bossData.health/bossData.full_health))*100 + '%' }"></div>
-						</div>
+						</div></el-tooltip>
 					</el-col>
-					<el-col style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+					<el-col style="display: flex; justify-content: space-between; margin-bottom: 15px;"><el-tooltip class="item" effect="dark" content="点击修改Boss状态" placement="top">
 						<div @click="startmodify" style="cursor:pointer"><a :class="{ big: !bossData.challenger }">[[bossData.health.toString()
-								]]/</a><font>[[ bossData.full_health.toString() ]]</font></div>
+								]]/</a><font>[[ bossData.full_health.toString() ]]</font></div></el-tooltip><el-tooltip class="item" effect="dark" content="点击修改Boss状态" placement="top">
 						<div @click="startmodify" style="cursor:pointer"><a :class="{ big: !bossData.challenger }">[[ ((bossData.health/
-								bossData.full_health) * 100).toFixed(1) ]]%</a></div>
+								bossData.full_health) * 100).toFixed(1) ]]%</a></div></el-tooltip>
 					</el-col>
 				</el-row>
 				{% if is_member -%}

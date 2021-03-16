@@ -70,7 +70,7 @@
 		</svg>
 	</div><br>
 	<div id="app">
-		<a href="{{ url_for('yobot_user_info', qqid=user.qqid) }}"><el-avatar :src="'https://q1.qlogo.cn/g?b=qq&nk=' + {{user.qqid}} + '&s=140'"></el-avatar>
+		<a href="{{ url_for('yobot_user_info', qqid=user.qqid) }}"><el-tooltip class="item" effect="dark" content="点击打开用户信息页面" placement="top"><el-avatar :src="'https://q1.qlogo.cn/g?b=qq&nk=' + {{user.qqid}} + '&s=140'"></el-avatar></el-tooltip>
 		<h4>欢迎，{{ user.nickname }}</h4></a>
 		{% if user.authority_group < 10 -%}
 		<el-row>

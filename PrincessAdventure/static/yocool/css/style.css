@@ -909,3 +909,8 @@ td {
 		transform: rotate(360deg);
 	}
 }
+
+
+.el-tooltip__popper.is-dark, .el-tooltip__popper[x-placement^=top] .popper__arrow , .el-tooltip__popper[x-placement^=top] .popper__arrow::after{
+	background: var(--primary-color-1);
+}
