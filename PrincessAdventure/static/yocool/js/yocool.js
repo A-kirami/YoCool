@@ -1,1 +1,23 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('5 3=[];3[0]="4://f.g.d/8/9-s.7";3[1]="4://f.g.d/8/9-t.7";3[2]="4://f.g.d/8/9-v.7";$(e(){5 b=3[j.u(j.w()*3.y)];x(6.k){6.k(b)}q{$(\'<3 />\',{r:\'z\',c:b}).L(\'M\')}});6.J("<n K=\\\'N\\\'>Q i <a c=\\\'4://p.o/O/P\\\'>D</a> | E i <a c=\\\'4://p.o/A-B/l\\\'>l</a></n>");$(e(){$(H).I(e(){5 m=$("#m");5 F=$("#G").C();5 h=$(6).h()})});',53,53,'|||link|https|var|document|css|princessadventure|scheme||style|href|cn|function|yocool|pcrlink|scrollTop|by|Math|createStyleSheet|YoCool|topToolbar|div|com|github|else|rel|01|02|floor|03|random|if|length|stylesheet||kirami|outerHeight|Yobot|Themes|headerH|header|window|scroll|writeln|id|appendTo|head|bottomToolbar|pcrbot|yobot|Powered'.split('|'),0,{}))
+var link = [];
+link[0] = "https://yocool.pcrlink.cn/princessadventure/scheme-01.css";
+link[1] = "https://yocool.pcrlink.cn/princessadventure/scheme-02.css";
+link[2] = "https://yocool.pcrlink.cn/princessadventure/scheme-03.css";
+$(function() {
+    var style = link[Math.floor(Math.random() * link.length)];
+    if (document.createStyleSheet) {
+        document.createStyleSheet(style)
+    } else {
+        $('<link />', {
+            rel: 'stylesheet',
+            href: style
+        }).appendTo('head')
+    }
+});
+document.writeln("<div id=\'bottomToolbar\'>Powered by <a href=\'https://github.com/pcrbot/yobot\'>Yobot</a> | Themes by <a href=\'https://github.com/A-kirami/YoCool\'>YoCool</a></div>");
+$(function() {
+    $(window).scroll(function() {
+        var topToolbar = $("#topToolbar");
+        var headerH = $("#header").outerHeight();
+        var scrollTop = $(document).scrollTop()
+    })
+});

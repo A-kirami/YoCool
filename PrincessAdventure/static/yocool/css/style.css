@@ -911,6 +911,10 @@ td {
 }
 
 
-.el-tooltip__popper.is-dark, .el-tooltip__popper[x-placement^=top] .popper__arrow , .el-tooltip__popper[x-placement^=top] .popper__arrow::after{
+.el-tooltip__popper.is-dark {
 	background: var(--primary-color-1);
+}
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow , .el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+	border-top-color: var(--primary-color-1);
 }
