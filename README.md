@@ -77,8 +77,9 @@ YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载�
 无需重启，初次安装或更新版本时，PC端需要``Ctrl+F5``强制刷新缓存，移动端需要清除浏览器缓存
 
 ## 最近更新
- - 适配yobotv3.6.8
- - 更换CDN源
+ - 增加了用户引导提示
+ - 增加了侧边帮助栏
+ - 适配yobotv3.6.11
 <br>[了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
 
 ## 了解更多

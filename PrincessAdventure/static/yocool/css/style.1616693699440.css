@@ -918,3 +918,19 @@ td {
 .el-tooltip__popper[x-placement^=top] .popper__arrow , .el-tooltip__popper[x-placement^=top] .popper__arrow::after {
 	border-top-color: var(--primary-color-1);
 }
+
+.sliderbar-container {
+	border: 1px solid var(--primary-color-1);
+	border-radius: 0 0 5px 0;
+	background-color: var(--background-color);
+}
+
+.title {
+	background: var(--primary-color-1);
+	border-radius: 0 5px 5px 0;
+}
+
+.sliderbar-container .body p a{
+	font-size: 15px;
+	color: var(--font-color);
+}
