@@ -66,11 +66,11 @@ $(function() {
                 'width': opts.width+'px',
                 'height' : opts.height+'px',
                 'position':'relative',
-                'padding':'15px',
+                'padding':'10px',
                 'overflow-x':'hidden',
                 'overflow-y':'auto',
                 'font-family':'Microsoft Yahei',
-                'font-size' : '15px'
+                'font-size' : '14px'
             });
 
             var titleCss = {
