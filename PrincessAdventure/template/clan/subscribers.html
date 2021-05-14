@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 
 <head>
-    <title>公会战预约</title>
-    <meta name='viewport' content='width=480' charset="utf-8" />
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
-    <link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1616693699440.css">
-    <style>
-        .el-badge {
+	<title>公会战预约</title>
+	<meta name='viewport' content='width=480' charset="utf-8" />
+	<script src="https://yocool.pcrlink.cn/js/vue/2.6.11/vue.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/axios/0.19.2/axios.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/element-ui/2.13.0/index.js"></script>
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/css/element-ui/2.13.0/index.css">
+	<script src="https://yocool.pcrlink.cn/js/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1620980769482.css">
+	<style>
+		.el-badge {
             margin-top: 8px;
         }
     </style>
 </head>
 
 <body>
-    <div id="app">
-        <div id="topToolbar">
-        	<el-page-header @back="location='../'"></el-page-header>
-        	<div class="logo"><a class="url" href="https://pcrlink.cn/"></a></div>
-        	<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        		<el-menu-item index="5">我的</el-menu-item>
-        		<el-menu-item index="4">统计</el-menu-item>
-        		<el-menu-item index="3">查刀</el-menu-item>
-        		<el-menu-item index="2">预约</el-menu-item>
-        		<el-menu-item index="1">面板</el-menu-item>
-        	</el-menu>
-        </div>
-        <h1 style="text-align:center">预约名单</h1>
-        <el-tabs type="border-card" style="width: 90%;margin: auto;">
-            <el-tab-pane v-for="bn in 6">
-                <span slot="label">
-                    <el-badge :value="subscribers[bn-1].length" :hidden="subscribers[bn-1].length == 0">[[ bosstag[bn-1] ]]</el-badge>
-                </span>
-                <p v-for="m in subscribers[bn-1]">
-                    [[ find_name(m.qqid) ]]（[[ m.qqid ]]）
-                    <template v-if="m.message">
-                        ：[[ m.message ]]
-                    </template>
-                </p>
-                <p v-if="subscribers[bn-1].length == 0">
-                    没有记录
-                </p>
-            </el-tab-pane>
-        </el-tabs>
-    </div>
+	<div id="app">
+		<div id="topToolbar">
+			<el-page-header @back="location='../'"></el-page-header>
+			<div class="logo"><a class="url" href="https://pcrlink.cn/"></a></div>
+			<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+				<el-menu-item index="5">我的</el-menu-item>
+				<el-menu-item index="4">统计</el-menu-item>
+				<el-menu-item index="3">查刀</el-menu-item>
+				<el-menu-item index="2">预约</el-menu-item>
+				<el-menu-item index="1">面板</el-menu-item>
+			</el-menu>
+		</div>
+		<h1 style="text-align:center">预约名单</h1>
+		<el-tabs type="border-card" style="width: 90%;margin: auto;">
+			<el-tab-pane v-for="bn in 6">
+				<span slot="label">
+					<el-badge :value="subscribers[bn-1].length" :hidden="subscribers[bn-1].length == 0">[[ bosstag[bn-1] ]]</el-badge>
+				</span>
+				<p v-for="m in subscribers[bn-1]">
+					[[ find_name(m.qqid) ]]（[[ m.qqid ]]）
+					<template v-if="bn === 1 && !!m.created_time">
+						（已挂树[[ get_time_delta(m.created_time) ]]）
+					</template>
+					<template v-if="m.message">
+						：[[ m.message ]]
+					</template>
+				</p>
+				<p v-if="subscribers[bn-1].length == 0">
+					没有记录
+				</p>
+			</el-tab-pane>
+		</el-tabs>
+	</div>
 </body>
-<script>var csrf_token = "{{ session['csrf_token'] }}";</script>
+<script>
+	var csrf_token = "{{ session['csrf_token'] }}";
+</script>
 <script src="{{ url_for('yobot_static', filename='clan/subscribers.js') }}"></script>
 
 </html>

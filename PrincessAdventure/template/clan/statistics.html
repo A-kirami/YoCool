@@ -3,13 +3,13 @@
 <head>
 	<title>数据分析</title>
 	<meta name='viewport' content='width=480' charset="utf-8" />
-	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
-	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
-	<script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
-	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/vue/2.6.11/vue.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/axios/0.19.2/axios.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/element-ui/2.13.0/index.js"></script>
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/css/element-ui/2.13.0/index.css">
+	<script src="https://yocool.pcrlink.cn/js/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1616693699440.css">
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1620980769482.css">
 	<style>
 		body {
 			text-align: center;
@@ -122,54 +122,59 @@
 		<div class="Service-box">
 			<div class="Service-content clearfix">
 				<el-row>
-						<div class="lib">
-							<el-button class="Service-item" @click="location.href='./1/'">
-								<div class="item-image">
-									<img src="https://yocool.pcrlink.cn/princessadventure/pecorine_q.png">
-								</div>
-								<h3 class="item-title">出刀顺序</h3>
-								<div class="item-text">成员出刀顺序记录</div>
-								<span class="item-link">立即查看</span>
-							</el-button>
-						</div>
-						<div class="lib">
-							<el-button class="Service-item" @click="location.href='./2/'">
-								<div class="item-image">
-									<img src="https://yocool.pcrlink.cn/princessadventure/kokkoro_q.png">
-								</div>
-								<h3 class="item-title">数据图表</h3>
-								<div class="item-text">多种数据图表分析</div>
-								<span class="item-link">立即查看</span>
-							</el-button>
-						</div>
-						<a class="lib" href="#" target="_blank" id="clan-battle-analyzer">
-								<el-button class="Service-item">
-									<div class="item-image">
-										<img src="https://yocool.pcrlink.cn/princessadventure/karyl_q.png">
-									</div>
-									<h3 class="item-title">均值偏差</h3>
-									<div class="item-text">公会战偏差值计算</div>
-									<span class="item-link">立即查看</span>
-								</el-button></a>
-						<a class="lib" href="#" target="_blank" id="pcrd-yobot-fe">
-								<el-button class="Service-item">
-									<div class="item-image">
-										<img src="https://yocool.pcrlink.cn/princessadventure/yui_q.png">
-									</div>
-									<h3 class="item-title">多维分析</h3>
-									<div class="item-text">会战成员数据分析</div>
-									<span class="item-link">立即查看</span>
-								</el-button></a>
-					</el-row>
+					<div class="lib">
+						<el-button class="Service-item" @click="location.href='./1/'">
+							<div class="item-image">
+								<img src="https://yocool.pcrlink.cn/princessadventure/pecorine_q.png">
+							</div>
+							<h3 class="item-title">出刀顺序</h3>
+							<div class="item-text">成员出刀顺序记录</div>
+							<span class="item-link">立即查看</span>
+						</el-button>
+					</div>
+					<div class="lib">
+						<el-button class="Service-item" @click="location.href='./2/'">
+							<div class="item-image">
+								<img src="https://yocool.pcrlink.cn/princessadventure/kokkoro_q.png">
+							</div>
+							<h3 class="item-title">数据图表</h3>
+							<div class="item-text">多种数据图表分析</div>
+							<span class="item-link">立即查看</span>
+						</el-button>
+					</div>
+					<a class="lib" href="#" target="_blank" id="clan-battle-analyzer">
+						<el-button class="Service-item">
+							<div class="item-image">
+								<img src="https://yocool.pcrlink.cn/princessadventure/karyl_q.png">
+							</div>
+							<h3 class="item-title">均值偏差</h3>
+							<div class="item-text">公会战偏差值计算</div>
+							<span class="item-link">立即查看</span>
+						</el-button>
+					</a>
+					<a class="lib" href="#" target="_blank" id="pcrd-yobot-fe">
+						<el-button class="Service-item">
+							<div class="item-image">
+								<img src="https://yocool.pcrlink.cn/princessadventure/yui_q.png">
+							</div>
+							<h3 class="item-title">多维分析</h3>
+							<div class="item-text">会战成员数据分析</div>
+							<span class="item-link">立即查看</span>
+						</el-button>
+					</a>
+				</el-row>
 			</div>
 		</div>
 	</div>
 	<h2 class="item-title">原始数据</h2><br>
 	<div class="lib2"><a href="./api/"><button class="el-button el-button--info el-button--small">查看本轮</button></a>
 	</div>
-	<div class="lib2"><a href="./api/" download><button class="el-button el-button--info el-button--small">下载本轮</button></a><br></div>
-	<div class="lib2"><a href="./api/?battle_id=all"><button class="el-button el-button--info el-button--small">查看全部</button></a></div>
-	<div class="lib2"><a href="./api/?battle_id=all" download><button class="el-button el-button--info el-button--small">下载全部</button></a><br></div>
+	<div class="lib2"><a href="./api/" download><button
+				class="el-button el-button--info el-button--small">下载本轮</button></a><br></div>
+	<div class="lib2"><a href="./api/?battle_id=all"><button
+				class="el-button el-button--info el-button--small">查看全部</button></a></div>
+	<div class="lib2"><a href="./api/?battle_id=all" download><button
+				class="el-button el-button--info el-button--small">下载全部</button></a><br></div>
 	<br><br><br>
 	<div>
 		{% if allow_api -%}
@@ -189,7 +194,7 @@
 	var apiurl = window.location.href + "api/?apikey=" + apikey
 	document.getElementById("apiurl").value = apiurl;
 	document.getElementById("pcrd-yobot-fe").href = "http://tools.yobot.win/pcrd-yobot-fe/#" + encodeURIComponent(apiurl);
-	document.getElementById("clan-battle-analyzer").href = "http://clan-battle-analyzer.pcrbot.com/?apiURL=" +
+	document.getElementById("clan-battle-analyzer").href = "http://librazy.reinwd.moe/?apiURL=" +
 		encodeURIComponent(apiurl);
 	document.getElementById("copy").addEventListener("click", e => {
 		document.getElementById("apiurl").select();
@@ -217,4 +222,10 @@
         groupinfo：群组信息
         members：成员列表
         challenges：出刀记录表
+
+		出刀顺序 by @Ai-Himmel https://github.com/Ai-Himmel
+		数据图表 by @Diving-Fish & @Winrey https://github.com/Diving-Fish
+		均值偏差 by @Alive24 https://github.com/Alive24 @Librazy https://github.com/Librazy/pcr-clan-battle-analyzer-vue
+		多维分析 by @Tan90Qian https://github.com/Tan90Qian
+		更多统计方式欢迎提交 pull request，建议采用 api 调用的方式 
 	-->

@@ -258,9 +258,9 @@ var vm = new Vue({
             axios.post('../api/', payload).then(function (res) {
                 if (res.data.code != 0) {
                     if (res.data.code == 11) {
-                        res.data.message = '你的权限不足';
+                        res.data.message = '你的权限不足，如需提升权限，请联系维护组操作';
                     }
-                    thisvue.$alert(res.data.message, '请求失败');
+                    thisvue.$alert(res.data.message, '无操作权限');
                 } else {
                     thisvue.$notify({
                         title: '提醒',

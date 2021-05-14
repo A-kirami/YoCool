@@ -3,13 +3,13 @@
 <head>
 	<title>公会战</title>
 	<meta name='viewport' content='width=480' charset="utf-8" />
-	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
-	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
-	<script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
-	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/vue/2.6.11/vue.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/axios/0.19.2/axios.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/element-ui/2.13.0/index.js"></script>
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/css/element-ui/2.13.0/index.css">
+	<script src="https://yocool.pcrlink.cn/js/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1616693699440.css">
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1620980769482.css">
 	
 	<style>
 		.el-main{
@@ -67,7 +67,6 @@
 						</el-col>
 					</el-row>
 				</template>
-
 				<div class="character" style="height: 165px; position: relative;z-index: 99;">
 					<div class="character-wrap" :style="{ position: 'absolute',left: (1-(bossData.health/bossData.full_health))*100 + '%'}"><a
 						 href='./setting/'>
@@ -75,8 +74,6 @@
 						</el-tooltip></a>
 					</div>
 				</div>
-
-
 				<el-row style="margin-bottom: 5px;">
 					<el-col>
 						<el-tooltip class="item" effect="dark" content="点击修改Boss状态" placement="top">
@@ -243,7 +240,7 @@
 				<div class="buttons-row" style="margin-bottom: 20px;">
 					<div>
 						<el-dialog title="修改状态" :visible.sync="statusFormVisible">
-							<el-alert title="如果要清空数据，请在“设置”中操作，否则会导致分析数据不准确" type="warning" :hidden="(bossData.cycle!=1)||(bossData.num!=1)"></el-alert>
+							<el-alert title="如需重置进度，请在“公会设置”中操作。如需修改boss血量上限，请联系维护组操作" type="warning" :hidden="(bossData.cycle!=1)||(bossData.num!=1)"></el-alert>
 							<el-form>
 								<el-form-item label="周目数" label-width="120">
 									<el-input-number v-model="bossData.cycle" :min="1"></el-input-number>

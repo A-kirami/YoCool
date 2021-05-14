@@ -3,13 +3,13 @@
 <head>
 	<title>出刀记录</title>
 	<meta name='viewport' content='width=480' charset="utf-8" />
-	<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
-	<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
-	<script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
-	<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/vue/2.6.11/vue.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/axios/0.19.2/axios.min.js"></script>
+	<script src="https://yocool.pcrlink.cn/js/element-ui/2.13.0/index.js"></script>
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/css/element-ui/2.13.0/index.css">
+	<script src="https://yocool.pcrlink.cn/js/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1616693699440.css">
+	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1620980769482.css">
 
 	<style>
 		.el-table td,
@@ -26,14 +26,20 @@
 			height: 36px;
 			padding: 10px 12px;
 		}
+		
+		.progress-btn-bottom {
+			width: 120px;
+			height: 36px;
+			padding: 10px 12px;
+		}
 
 		.pc-box {
-			width: 1336px;
+			width: 1260px;
 			margin: 0 auto;
 		}
 
 		.el-table {
-			width: 1336px;
+			width: 1260px;
 			margin: 0 auto;
 		}
 
@@ -49,8 +55,6 @@
 		.el-progress-bar__inner {
 			background-color: var(--secondary-color-1);
 		}
-
-
 
 		.el-progress-bar__outer {
 			background-color: #ffffff;
@@ -72,6 +76,7 @@
 				width: 80%;
 			}
 		}
+		
 	</style>
 </head>
 
@@ -89,7 +94,7 @@
 			</el-menu>
 		</div>
 		<h1 style="text-align:center">出刀记录<el-popover placement="top" effect="light" trigger="hover">1.红名表示今日已使用过SL<br>2.有色背景表示已完成今日出刀<br>3.点击昵称或详细可以查看详细出刀情况<br>4.点击成员头像可以查看该成员的所有历史出刀记录<i
-					class="el-icon-question" slot="reference"></i></el-popover>
+				 class="el-icon-question" slot="reference"></i></el-popover>
 		</h1>
 		<el-date-picker v-model="reportDate" type="date" placeholder="选择日期" @change="report_day"></el-date-picker>
 		<el-button class="progress-btn" type="warning" @click="selectUnfinished">选中未完成</el-button>
@@ -122,9 +127,8 @@
 					</div>
 				</el-col>
 				<el-col :span="24">
-					<el-progress
-						:percentage="(progressData.reduce((s,i)=>s+i.finished,0)/members.length/3*100).toFixed(1)"
-						:show-text="false" :stroke-width="16"></el-progress>
+					<el-progress :percentage="(progressData.reduce((s,i)=>s+i.finished,0)/members.length/3*100).toFixed(1)" :show-text="false"
+					 :stroke-width="16"></el-progress>
 				</el-col>
 			</el-row>
 			<el-dialog title="未完成的尾刀一览" :visible.sync="tailsDataVisible">
@@ -143,14 +147,12 @@
 					没有尾刀
 				</template>
 			</el-dialog>
-			<el-table width="100%" v-if="isMobile" :data="progressData" :span-method="arraySpanMethod"
-				ref="multipleTable" @selection-change="handleSelectionChange" stripe :row-class-name="getRowClass"
-				@cell-click="clickCell">
+			<el-table width="100%" v-if="isMobile" :data="progressData" :span-method="arraySpanMethod" ref="multipleTable"
+			 @selection-change="handleSelectionChange" stripe :row-class-name="getRowClass" @cell-click="clickCell">
 				<el-table-column type="selection" width="70"></el-table-column>
 				<el-table-column label="成员" width="80">
 					<template slot-scope="scope">
-						<el-avatar shape="square" :src="'https://q1.qlogo.cn/g?b=qq&nk=' + scope.row.qqid + '&s=140'"
-							@click.native="location='../'+scope.row.qqid+'/'"></el-avatar>
+						<el-avatar shape="square" :src="'https://q1.qlogo.cn/g?b=qq&nk=' + scope.row.qqid + '&s=140'" @click.native="location='../'+scope.row.qqid+'/'"></el-avatar>
 					</template>
 				</el-table-column>
 				<el-table-column label="昵称" width="200">
@@ -175,8 +177,7 @@
 									尚未出刀
 								</template>
 							</div>
-							<i :style="{ visibility: props.row.detail[1] ? 'visible' : 'hidden' }"
-								class='el-icon-plus'></i>
+							<i :style="{ visibility: props.row.detail[1] ? 'visible' : 'hidden' }" class='el-icon-plus'></i>
 							<div class="damage-detail-box">
 								<template v-if="props.row.detail[1]">
 									<a v-html="csummary(props.row.detail[1])"></a>
@@ -203,8 +204,7 @@
 									尚未出刀
 								</template>
 							</div>
-							<i :style="{ visibility: props.row.detail[3] ? 'visible' : 'hidden' }"
-								class='el-icon-plus'></i>
+							<i :style="{ visibility: props.row.detail[3] ? 'visible' : 'hidden' }" class='el-icon-plus'></i>
 							<div class="damage-detail-box">
 								<template v-if="props.row.detail[3]">
 									<a v-html="csummary(props.row.detail[3])"></a>
@@ -230,8 +230,7 @@
 									尚未出刀
 								</template>
 							</div>
-							<i :style="{ visibility: props.row.detail[5] ? 'visible' : 'hidden' }"
-								class='el-icon-plus'></i>
+							<i :style="{ visibility: props.row.detail[5] ? 'visible' : 'hidden' }" class='el-icon-plus'></i>
 							<div class="damage-detail-box">
 								<template v-if="props.row.detail[5]">
 									<a v-html="csummary(props.row.detail[5])"></a>
@@ -247,11 +246,12 @@
 					</template>
 				</el-table-column>
 			</el-table>
-			
+
 			<div v-else class="pc-box">
-				<el-table width="100%" :data="progressData" :span-method="arraySpanMethod" ref="multipleTable"
-					@selection-change="handleSelectionChange" stripe :row-class-name="getRowClass" size="medium">
-					<el-table-column prop="sl" label="SL" width="75" sortable>
+				<el-table width="100%" :data="progressData" :span-method="arraySpanMethod" ref="multipleTable" @selection-change="handleSelectionChange"
+				 stripe :row-class-name="getRowClass" size="medium">
+					<el-table-column type="selection" width="60"></el-table-column>
+					<el-table-column prop="sl" label="SL" width="60" sortable>
 						<template slot-scope="scope">
 							<template v-if="!isToday">
 								<i class="el-icon-folder-remove"></i>
@@ -264,16 +264,14 @@
 					</el-table-column>
 					<el-table-column label="成员" width="60">
 						<template slot-scope="scope">
-							<el-avatar shape="square"
-								:src="'https://q1.qlogo.cn/g?b=qq&nk=' + scope.row.qqid + '&s=140'"
-								@click.native="location='../'+scope.row.qqid+'/'"></el-avatar>
+							<el-avatar shape="square" :src="'https://q1.qlogo.cn/g?b=qq&nk=' + scope.row.qqid + '&s=140'" @click.native="location='../'+scope.row.qqid+'/'"></el-avatar>
 						</template>
 					</el-table-column>
-					<el-table-column label="昵称" width="180" prop="nickname" sortable>
+					<el-table-column label="昵称" width="160" prop="nickname" sortable>
 					</el-table-column>
-					<el-table-column prop="finished" label="今日" width="60" sortable></el-table-column>
+					<el-table-column prop="finished" label="今日" width="50" sortable></el-table-column>
 					<el-table-column label="第一刀">
-						<el-table-column label="尾刀" width="150">
+						<el-table-column label="尾刀" width="145">
 							<template v-if="scope.row.detail[0]" slot-scope="scope">
 								<a v-html="csummary(scope.row.detail[0])"></a>
 								<el-popover placement="top" effect="light" trigger="hover">[[
@@ -281,7 +279,7 @@
 								</el-popover>
 							</template>
 						</el-table-column>
-						<el-table-column label="剩余刀" width="150">
+						<el-table-column label="剩余刀" width="145">
 							<template v-if="scope.row.detail[1]" slot-scope="scope">
 								<a v-html="csummary(scope.row.detail[1])"></a>
 								<el-popover placement="top" effect="light" trigger="hover">[[
@@ -291,7 +289,7 @@
 						</el-table-column>
 					</el-table-column>
 					<el-table-column label="第二刀">
-						<el-table-column label="尾刀" width="150">
+						<el-table-column label="尾刀" width="145">
 							<template v-if="scope.row.detail[2]" slot-scope="scope">
 								<a v-html="csummary(scope.row.detail[2])"></a>
 								<el-popover placement="top" effect="light" trigger="hover">[[
@@ -299,7 +297,7 @@
 								</el-popover>
 							</template>
 						</el-table-column>
-						<el-table-column label="剩余刀" width="150">
+						<el-table-column label="剩余刀" width="145">
 							<template v-if="scope.row.detail[3]" slot-scope="scope">
 								<a v-html="csummary(scope.row.detail[3])"></a>
 								<el-popover placement="top" effect="light" trigger="hover">[[
@@ -309,7 +307,7 @@
 						</el-table-column>
 					</el-table-column>
 					<el-table-column label="第三刀">
-						<el-table-column label="尾刀" width="150">
+						<el-table-column label="尾刀" width="145">
 							<template v-if="scope.row.detail[4]" slot-scope="scope">
 								<a v-html="csummary(scope.row.detail[4])"></a>
 								<el-popover placement="top" effect="light" trigger="hover">[[
@@ -317,7 +315,7 @@
 								</el-popover>
 							</template>
 						</el-table-column>
-						<el-table-column label="剩余刀" width="150">
+						<el-table-column label="剩余刀" width="145">
 							<template v-if="scope.row.detail[5]" slot-scope="scope">
 								<a v-html="csummary(scope.row.detail[5])"></a>
 								<el-popover placement="top" effect="light" trigger="hover">[[
@@ -326,28 +324,26 @@
 							</template>
 						</el-table-column>
 					</el-table-column>
-					<el-table-column type="selection" width="60"></el-table-column>
 				</el-table>
 				<div style="width: 100%;">
-				<el-button class="progress-btn" @click="viewInExcel" size="mini"
-					style="width: 115px;left: 600px;position: relative;">
-					<i class="el-icon-document">在Excel中查看</i></el-button>
 				</div>
 			</div>
 		</template>
-		<br><div style="width: 100%;">
-		<el-button class="progress-btn" @click="dropMemberVisible = true" style="margin-bottom: 20px;"><i class="el-icon-delete">删除</i>
-		</el-button>
-		<el-dialog title="警告" :visible.sync="dropMemberVisible">
-			<p>您确定要删除这[[ multipleSelection.length ]]名成员吗</p>
-			<span slot="footer" class="dialog-footer">
-				<el-button type="primary" @click="dropMemberVisible = false">取消</el-button>
-				<el-button type="danger" @click="sendRequest('drop_member'),dropMemberVisible = false">
-					确定
-				</el-button>
-			</span>
-		</el-dialog>
-	</div>
+		<div style="margin-bottom: 100px;">
+		</div>
+		<div style="width: 100%;position: fixed;bottom: 40px;">
+			<el-button class="progress-btn-bottom" @click="dropMemberVisible = true" style="margin: 0 15px;"><i class="el-icon-delete">删除公会成员</i></el-button>
+			<el-button class="progress-btn-bottom" @click="viewInExcel" size="mini" style="margin: 0 15px;"><i class="el-icon-document">在Excel中查看</i></el-button>
+			<el-dialog title="警告" :visible.sync="dropMemberVisible">
+				<p>您确定要删除这[[ multipleSelection.length ]]名成员吗</p>
+				<span slot="footer" class="dialog-footer">
+					<el-button type="primary" @click="dropMemberVisible = false">取消</el-button>
+					<el-button type="danger" @click="sendRequest('drop_member'),dropMemberVisible = false">
+						确定
+					</el-button>
+				</span>
+			</el-dialog>
+		</div>
 		<template v-else>
 			没有记录
 		</template>

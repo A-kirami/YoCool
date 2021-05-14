@@ -38,6 +38,20 @@ font {
 	color: var(--font-color);
 }
 
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(var(--primary-color-1), var(--primary-color-2));
+	border-radius: 4px;
+	transition: 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(var(--secondary-color-1), var(--secondary-color-2));
+}
+
 .big {
 	font-size: 32px;
 	color: var(--font-color);
