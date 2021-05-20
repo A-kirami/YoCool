@@ -81,7 +81,7 @@ YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载�
  - 修复了删除成员按钮的弹出层层级错误的问题
  - 修复了查刀页面报刀后，单元格缺失的问题
  - progress.js改为网络加载
- - 查刀页面的报刀记录中增加了代报人
+ - 查刀页面的报刀记录中增加了代报人(by [@sdyxxjj123](https://github.com/sdyxxjj123))
 <br>[了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
 
 ## 了解更多
@@ -89,7 +89,7 @@ YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载�
 
 ## 代码贡献
 感谢以下大佬在本项目中提供的支援和帮助</br>
-[@kaiseixd](https://github.com/kaiseixd) @白白小童鞋 [@pwinner](https://github.com/pwinner)
+[@kaiseixd](https://github.com/kaiseixd) @白白小童鞋 [@pwinner](https://github.com/pwinner) [@sdyxxjj123](https://github.com/sdyxxjj123)
 
 ## 联系我们
 Yobot后台美化组(Q群)：1143518690
