@@ -80,7 +80,13 @@ var vm = new Vue({
             if (cha == undefined) {
                 return '';
             }
-            return `(${cha.cycle}-${cha.boss_num}) <a class="digit${cha.damage.toString().length}">${cha.damage}</a>`;
+            if (cha.behalf == null) {
+                return `(${cha.cycle}-${cha.boss_num}) <a class="digit${cha.damage.toString().length}">${cha.damage}</a>`;
+            }
+            if (cha.behalf == cha.qqid) {
+                return `(${cha.cycle}-${cha.boss_num}) <a class="digit${cha.damage.toString().length}">${cha.damage}</a>`;
+            }
+            return `(${cha.cycle}-${cha.boss_num}) <a class="digit${cha.damage.toString().length}">${cha.damage}<br>由 ${this.find_name(cha.behalf)}(${cha.behalf})上报</a>`;
         },
         cdetail: function (cha) {
             if (cha == undefined) {
