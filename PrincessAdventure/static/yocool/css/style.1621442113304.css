@@ -787,12 +787,13 @@ progress {
 	background: var(--secondary-color-1);
 }
 
-.el-table--border td {
-	border-right: none;
+.el-table .cell {
+    padding-right: 0px;
 }
 
 .el-table td {
 	border-bottom: none;
+	border-right: none;
 }
 
 .el-table th.is-leaf {
@@ -947,4 +948,32 @@ td {
 .sliderbar-container .body p a{
 	font-size: 15px;
 	color: var(--font-color);
+}
+
+.el-table .cell {
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-break: break-all;
+    line-height: 23px;
+}
+
+.el-table .cell, .el-table--border td:first-child .cell, .el-table--border th:first-child .cell {
+    padding-left: 0px;
+}
+
+.el-table__body, .el-table__footer, .el-table__header {
+    table-layout: auto;
+    border-collapse: separate;
+}
+
+.el-table th>.cell {
+    padding-left: 0px;
+	padding-right: 0px;
+}
+
+.el-dialog {
+    z-index: 3000;
 }
