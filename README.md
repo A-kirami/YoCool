@@ -22,7 +22,6 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 - [最近更新](https://github.com/A-kirami/YoCool/#最近更新)
 - [了解更多](https://github.com/A-kirami/YoCool/#了解更多)
 - [代码贡献](https://github.com/A-kirami/YoCool/#代码贡献)
-- [联系我们](https://github.com/A-kirami/YoCool/#联系我们)
 - [相关项目](https://github.com/A-kirami/YoCool/#相关项目)
 
 ## 开始使用
