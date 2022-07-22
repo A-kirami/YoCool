@@ -1,0 +1,1 @@
+document.writeln("<div id=\'bottomToolbar\'>Powered by <a href=\'https://github.com/pcrbot/yobot\'>Yobot</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Themes by <a href=\'https://github.com/A-kirami/YoCool\'>YoCool</a></div>");

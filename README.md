@@ -1,4 +1,6 @@
-﻿![](https://i.loli.net/2020/07/23/HmLnyN5UKesPXld.png)
+﻿# ⚠️ 警告：由于Yobot已停止更新，故此项目不再进行维护，最后适配版本为 Yobot v3.6.16
+
+![](https://i.loli.net/2020/07/23/HmLnyN5UKesPXld.png)
 # YoCool——YobotWebBeautify
 <p align="left">
 <a href='https://github.com/A-kirami'><img src="https://img.shields.io/badge/establish-Akirami-blue.svg"/></a>
@@ -43,14 +45,6 @@ YoCool是[Yobot](https://github.com/pcrbot/yobot)的会战管理后台美化项�
 
 ### 安装
 <details>
-<summary>一键安装(推荐)</summary>
-YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载等便捷管理操作的HoshinoBotV2插件
-
-[点这里去安装使用](https://github.com/pcrbot/YoCool-Console)
-
-</details>
-
-<details>
 <summary>便携版</summary>
   
    - 未安装过yobot便携版<br>
@@ -62,10 +56,10 @@ YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载�
 
 <details>
 <summary>插件版或源码版</summary>
-  
+
 安装前请先备份``yobot\src\client\public``文件夹中的全部文件，以防出现意外问题<br>
 
-1. 复制主题包中的**template**和**static**文件夹<br>
+1. 复制主题包中的**libs**、**template**和**static**文件夹<br>
 
 2. 进入到``yobot\src\client\public``目录下<br>
 
@@ -77,8 +71,7 @@ YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载�
 无需重启，即装即用
 
 ## 最近更新
- - 新增主题：Origin源生
-<br>[了解历史更新内容请点击这里](https://github.com/A-kirami/YoCool/wiki/update)
+ - 不再使用 CDN, 静态资源移至本地
 
 ## 了解更多
 关于YoCool的更多信息，你可以在[YoCool Wiki](https://github.com/A-kirami/YoCool/wiki)中查看到
@@ -86,9 +79,6 @@ YoCool控制台，实现YoCool的一键安装、切换主题、升级、卸载�
 ## 代码贡献
 感谢以下大佬在本项目中提供的支援和帮助</br>
 [@kaiseixd](https://github.com/kaiseixd) @白白小童鞋 [@pwinner](https://github.com/pwinner)
-
-## 联系我们
-Yobot后台美化组(Q群)：1143518690
 
 ## 相关项目
 - [YoWhite](https://github.com/shkongzhu/YoWhite) - 一个白色调的Yobot美化模板

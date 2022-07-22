@@ -3,13 +3,13 @@
 <head>
 	<title>数据分析</title>
 	<meta name='viewport' content='width=480' charset="utf-8" />
-	<script src="https://yocool.pcrlink.cn/js/vue/2.6.11/vue.min.js"></script>
-	<script src="https://yocool.pcrlink.cn/js/axios/0.19.2/axios.min.js"></script>
-	<script src="https://yocool.pcrlink.cn/js/element-ui/2.13.0/index.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/css/element-ui/2.13.0/index.css">
-	<script src="https://yocool.pcrlink.cn/js/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1621442113304.css">
+	<script src="/yobot-depencency/vue@2.6.11/dist/vue.min.js"></script>
+	<script src="/yobot-depencency/axios@0.19.2/dist/axios.min.js"></script>
+	<script src="/yobot-depencency/element-ui@2.13.0/lib/index.js"></script>
+	<link rel="stylesheet" href="/yobot-depencency/element-ui@2.13.0/lib/theme-chalk/index.css">
+	<script src="/yobot-depencency/jquery@2.1.1/jquery.min.js"></script>
+	<script src="/yobot-depencency/yocool@final/princessadventure/yocool.js"></script>
+	<link rel="stylesheet" href="/yobot-depencency/yocool@final/princessadventure/style.css">
 	<style>
 		body {
 			text-align: center;
@@ -109,7 +109,7 @@
 	<div id="app">
 		<div id="topToolbar">
 			<el-page-header @back="location='..'" content=""></el-page-header>
-			<div class="logo"><a class="url" href="https://pcrlink.cn/"></a></div>
+			<div class="logo"><a class="url" href="#"></a></div>
 			<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleTitleSelect">
 				<el-menu-item index="5">我的</el-menu-item>
 				<el-menu-item index="4">统计</el-menu-item>
@@ -125,7 +125,7 @@
 					<div class="lib">
 						<el-button class="Service-item" @click="location.href='./1/'">
 							<div class="item-image">
-								<img src="https://yocool.pcrlink.cn/princessadventure/pecorine_q.png">
+								<img src="/yobot-depencency/yocool@final/princessadventure/pecorine_q.png">
 							</div>
 							<h3 class="item-title">出刀顺序</h3>
 							<div class="item-text">成员出刀顺序记录</div>
@@ -135,7 +135,7 @@
 					<div class="lib">
 						<el-button class="Service-item" @click="location.href='./2/'">
 							<div class="item-image">
-								<img src="https://yocool.pcrlink.cn/princessadventure/kokkoro_q.png">
+								<img src="/yobot-depencency/yocool@final/princessadventure/kokkoro_q.png">
 							</div>
 							<h3 class="item-title">数据图表</h3>
 							<div class="item-text">多种数据图表分析</div>
@@ -145,7 +145,7 @@
 					<a class="lib" href="#" target="_blank" id="clan-battle-analyzer">
 						<el-button class="Service-item">
 							<div class="item-image">
-								<img src="https://yocool.pcrlink.cn/princessadventure/karyl_q.png">
+								<img src="/yobot-depencency/yocool@final/princessadventure/karyl_q.png">
 							</div>
 							<h3 class="item-title">均值偏差</h3>
 							<div class="item-text">公会战偏差值计算</div>
@@ -155,7 +155,7 @@
 					<a class="lib" href="#" target="_blank" id="pcrd-yobot-fe">
 						<el-button class="Service-item">
 							<div class="item-image">
-								<img src="https://yocool.pcrlink.cn/princessadventure/yui_q.png">
+								<img src="/yobot-depencency/yocool@final/princessadventure/yui_q.png">
 							</div>
 							<h3 class="item-title">多维分析</h3>
 							<div class="item-text">会战成员数据分析</div>

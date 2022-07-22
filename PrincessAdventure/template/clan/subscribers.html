@@ -3,13 +3,13 @@
 <head>
 	<title>公会战预约</title>
 	<meta name='viewport' content='width=480' charset="utf-8" />
-	<script src="https://yocool.pcrlink.cn/js/vue/2.6.11/vue.min.js"></script>
-	<script src="https://yocool.pcrlink.cn/js/axios/0.19.2/axios.min.js"></script>
-	<script src="https://yocool.pcrlink.cn/js/element-ui/2.13.0/index.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/css/element-ui/2.13.0/index.css">
-	<script src="https://yocool.pcrlink.cn/js/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://yocool.pcrlink.cn/princessadventure/yocool.1616693699440.js"></script>
-	<link rel="stylesheet" href="https://yocool.pcrlink.cn/princessadventure/style.1621442113304.css">
+	<script src="/yobot-depencency/vue@2.6.11/dist/vue.min.js"></script>
+	<script src="/yobot-depencency/axios@0.19.2/dist/axios.min.js"></script>
+	<script src="/yobot-depencency/element-ui@2.13.0/lib/index.js"></script>
+	<link rel="stylesheet" href="/yobot-depencency/element-ui@2.13.0/lib/theme-chalk/index.css">
+	<script src="/yobot-depencency/jquery@2.1.1/jquery.min.js"></script>
+	<script src="/yobot-depencency/yocool@final/princessadventure/yocool.js"></script>
+	<link rel="stylesheet" href="/yobot-depencency/yocool@final/princessadventure/style.css">
 	<style>
 		.el-badge {
             margin-top: 8px;
@@ -21,7 +21,7 @@
 	<div id="app">
 		<div id="topToolbar">
 			<el-page-header @back="location='../'"></el-page-header>
-			<div class="logo"><a class="url" href="https://pcrlink.cn/"></a></div>
+			<div class="logo"><a class="url" href="#"></a></div>
 			<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
 				<el-menu-item index="5">我的</el-menu-item>
 				<el-menu-item index="4">统计</el-menu-item>
